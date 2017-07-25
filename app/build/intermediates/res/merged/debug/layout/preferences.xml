@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical" >
+    <!--  top section -->
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+ 		<!-- first line -->
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/scoring" />
+
+        </LinearLayout>
+     <!-- second line -->
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+            <TextView
+                android:id="@+id/textSpacer3"
+                android:layout_width="10dp"
+                android:layout_height="wrap_content"
+                android:text="@string/spaces" />
+
+            <TextView
+                android:id="@+id/tvDoubleOnBump"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/double_on_bump" />
+
+            <CheckBox
+                android:id="@+id/double_on_bump_checkbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true" />
+
+        </LinearLayout>
+
+
+     <!-- third line -->
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+            <TextView
+                android:id="@+id/ts7"
+                android:layout_width="10dp"
+                android:layout_height="wrap_content"
+                android:text="@string/spaces" />
+
+            <TextView
+                android:id="@+id/tvDoubleLimit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/double_limit" />
+
+            <EditText
+                android:id="@+id/double_limit_text"
+                android:layout_width="86dp"
+                android:layout_height="wrap_content"
+                android:inputType="number" >
+            </EditText>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/textSpacer4"
+                android:layout_width="10dp"
+                android:layout_height="wrap_content"
+                android:text="@string/spaces" />
+
+        </LinearLayout>
+
+    <!--  fourth line -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/emsView9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/emailSetting" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+            <TextView
+                android:id="@+id/ts9"
+                android:layout_width="10dp"
+                android:layout_height="wrap_content"
+                android:text="@string/spaces" />
+
+            <TextView
+                android:id="@+id/tvemailAddresses"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/default_email" />
+
+            <EditText
+                android:id="@+id/email_default_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress" >
+            </EditText>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"  >
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cancel"
+            android:id="@+id/settings_cancel_button"
+            android:onClick="onCancelClick"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ok"
+            android:id="@+id/settings_ok_button"
+            android:onClick="onOkClick" />
+    </LinearLayout>
+						
+</LinearLayout>

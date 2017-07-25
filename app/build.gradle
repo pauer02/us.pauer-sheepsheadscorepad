@@ -1,0 +1,40 @@
+apply plugin: 'com.android.application'
+
+android {
+    signingConfigs {
+        bigfoot1 {
+            keyAlias 'bigfoot1'
+            keyPassword 'bigfoot1'
+            storeFile file('/home/chris/android-studio/bin/bigfoot')
+            storePassword 'bigfoot1'
+        }
+    }
+    compileSdkVersion 17
+    buildToolsVersion '25.0.1'
+    defaultConfig {
+        applicationId "us.pauer.android.sheepsheadscorepad"
+        minSdkVersion 11
+        targetSdkVersion 15
+        signingConfig signingConfigs.bigfoot1
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+        debug {
+            signingConfig signingConfigs.bigfoot1
+            debuggable true
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_7
+        targetCompatibility JavaVersion.VERSION_1_7
+    }
+    productFlavors {
+    }
+}
+
+dependencies {
+    compile 'com.android.support:support-v4:18.0.0'
+}

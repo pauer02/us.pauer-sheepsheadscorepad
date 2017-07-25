@@ -1,0 +1,26 @@
+[
+    {
+        "merged": "C:\\Users\\Chris\\AndroidStudioProjects\\SheepsheadScorepad\\app\\build\\intermediates\\res\\merged\\debug\\layout\\stats.xml",
+        "source": "C:\\Users\\Chris\\AndroidStudioProjects\\SheepsheadScorepad\\app\\src\\main\\res\\layout\\stats.xml"
+    },
+    {
+        "merged": "C:\\Users\\Chris\\AndroidStudioProjects\\SheepsheadScorepad\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_history.xml",
+        "source": "C:\\Users\\Chris\\AndroidStudioProjects\\SheepsheadScorepad\\app\\src\\main\\res\\layout\\activity_history.xml"
+    },
+    {
+        "merged": "C:\\Users\\Chris\\AndroidStudioProjects\\SheepsheadScorepad\\app\\build\\intermediates\\res\\merged\\debug\\layout\\hand_layout.xml",
+        "source": "C:\\Users\\Chris\\AndroidStudioProjects\\SheepsheadScorepad\\app\\src\\main\\res\\layout\\hand_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\Chris\\AndroidStudioProjects\\SheepsheadScorepad\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_help.xml",
+        "source": "C:\\Users\\Chris\\AndroidStudioProjects\\SheepsheadScorepad\\app\\src\\main\\res\\layout\\activity_help.xml"
+    },
+    {
+        "merged": "C:\\Users\\Chris\\AndroidStudioProjects\\SheepsheadScorepad\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_score.xml",
+        "source": "C:\\Users\\Chris\\AndroidStudioProjects\\SheepsheadScorepad\\app\\src\\main\\res\\layout\\activity_score.xml"
+    },
+    {
+        "merged": "C:\\Users\\Chris\\AndroidStudioProjects\\SheepsheadScorepad\\app\\build\\intermediates\\res\\merged\\debug\\layout\\preferences.xml",
+        "source": "C:\\Users\\Chris\\AndroidStudioProjects\\SheepsheadScorepad\\app\\src\\main\\res\\layout\\preferences.xml"
+    }
+]

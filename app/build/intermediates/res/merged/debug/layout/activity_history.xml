@@ -1,0 +1,865 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="us.pauer.android.sheepsheadscorepad.HistoryActivity">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:weightSum="1">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/LargeText"
+                android:layout_weight="@integer/scoreBoxWeight"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:text="HISTORY"/>
+            <LinearLayout
+                android:id="@+id/scorelayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                    <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/LargeText"
+                        android:background="#FFFFFF"
+                    android:gravity="bottom"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:text="Date of Game:"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="date"
+                    android:ems="5"
+                    android:id="@+id/editTextGameDate1"
+                    android:layout_weight="@integer/scoreBoxWeight" />
+
+                </LinearLayout>
+
+        </LinearLayout>
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.2dp"
+            android:background="@android:color/black"
+            android:visibility="visible" />
+
+        <LinearLayout
+            android:id="@+id/historyPlayerNamesLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.01"
+            android:orientation="horizontal" >
+            <View
+                android:layout_width="0.2dp"
+                android:layout_height="fill_parent"
+                android:background="@android:color/white"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/histPLayName11"
+                android:layout_width="8dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="@integer/scoreBoxWeight"
+                android:background="#000000"
+                android:gravity="center_horizontal"
+                android:textColor="@android:color/white"
+                android:textSize="15sp" >
+            </TextView>
+
+            <View
+                android:layout_width="0.2dp"
+                android:layout_height="fill_parent"
+                android:background="@android:color/white"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/histPLayName12"
+                android:layout_width="8dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="@integer/scoreBoxWeight"
+                android:background="#000000"
+                android:gravity="center_horizontal"
+                android:textColor="@android:color/white"
+                android:textSize="15sp" >
+            </TextView>
+
+            <View
+                android:layout_width="0.2dp"
+                android:layout_height="fill_parent"
+                android:background="@android:color/white"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/histPLayName13"
+                android:layout_width="8dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="@integer/scoreBoxWeight"
+                android:background="#000000"
+                android:gravity="center_horizontal"
+                android:textColor="@android:color/white"
+                android:textSize="15sp" >
+            </TextView>
+
+            <View
+                android:layout_width="0.2dp"
+                android:layout_height="fill_parent"
+                android:background="@android:color/white"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/histPLayName14"
+                android:layout_width="8dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="@integer/scoreBoxWeight"
+                android:background="#000000"
+                android:gravity="center_horizontal"
+                android:textColor="@android:color/white"
+                android:textSize="15sp" >
+            </TextView>
+
+            <View
+                android:layout_width="0.2dp"
+                android:layout_height="fill_parent"
+                android:background="@android:color/white"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/histPLayName15"
+                android:layout_width="8dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="@integer/scoreBoxWeight"
+                android:background="#000000"
+                android:gravity="center_horizontal"
+                android:textColor="@android:color/white"
+                android:textSize="15sp" >
+            </TextView>
+
+            <View
+                android:layout_width="0.2dp"
+                android:layout_height="fill_parent"
+                android:background="@android:color/white"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/histPLayName16"
+                android:layout_width="8dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="@integer/scoreBoxWeight"
+                android:background="#000000"
+                android:gravity="center_horizontal"
+                android:textColor="@android:color/white"
+                android:textSize="15sp" >
+            </TextView>
+
+            <View
+                android:layout_width="0.2dp"
+                android:layout_height="fill_parent"
+                android:background="@android:color/white"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/histPLayName17"
+                android:layout_width="8dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="@integer/scoreBoxWeight"
+                android:background="#000000"
+                android:gravity="center_horizontal"
+                android:textColor="@android:color/white"
+                android:textSize="15sp" >
+            </TextView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/scorelayout1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <View
+                android:layout_height="fill_parent"
+                android:layout_width="0.2dp"
+                android:visibility="visible"
+                android:background="@android:color/black"/>
+
+            <TextView
+                android:id="@+id/pc_Score11"
+                android:layout_width="8dp"
+                android:layout_height="match_parent"
+                android:layout_weight="@integer/scoreBoxWeight"
+                android:background="#FFFFFF"
+                android:clickable="true"
+                android:gravity="center"
+                android:onClick="onScoreClick"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_height="fill_parent"
+                android:layout_width="0.2dp"
+                android:visibility="visible"
+                android:background="@android:color/black"/>
+            <TextView
+                android:id="@+id/pc_Score12"
+                android:layout_width="8dp"
+                android:layout_height="match_parent"
+                android:layout_weight="@integer/scoreBoxWeight"
+                android:background="#FFFFFF"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:gravity="center"/>
+            <View
+                android:layout_height="fill_parent"
+                android:layout_width="0.2dp"
+                android:visibility="visible"
+                android:background="@android:color/black"/>
+            <TextView
+                android:id="@+id/pc_Score13"
+                android:layout_width="8dp"
+                android:layout_height="match_parent"
+                android:layout_weight="@integer/scoreBoxWeight"
+                android:background="#FFFFFF"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:gravity="center"/>
+            <View
+                android:layout_height="fill_parent"
+                android:layout_width="0.2dp"
+                android:visibility="visible"
+                android:background="@android:color/black"/>
+            <TextView
+                android:id="@+id/pc_Score14"
+                android:layout_width="8dp"
+                android:layout_height="match_parent"
+                android:layout_weight="@integer/scoreBoxWeight"
+                android:background="#FFFFFF"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:gravity="center"/>
+            <View
+                android:layout_height="fill_parent"
+                android:layout_width="0.2dp"
+                android:visibility="visible"
+                android:background="@android:color/black"/>
+            <TextView
+                android:id="@+id/pc_Score15"
+                android:layout_width="8dp"
+                android:layout_height="match_parent"
+                android:layout_weight="@integer/scoreBoxWeight"
+                android:background="#FFFFFF"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:gravity="center"/>
+            <View
+                android:layout_height="fill_parent"
+                android:layout_width="0.2dp"
+                android:visibility="visible"
+                android:background="@android:color/black"/>
+            <TextView
+                android:id="@+id/pc_Score16"
+                android:layout_width="8dp"
+                android:layout_height="match_parent"
+                android:layout_weight="@integer/scoreBoxWeight"
+                android:background="#FFFFFF"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:gravity="center"/>
+            <View
+                android:layout_height="fill_parent"
+                android:layout_width="0.2dp"
+                android:visibility="visible"
+                android:background="@android:color/black"/>
+            <TextView
+                android:id="@+id/pc_Score17"
+                android:layout_width="8dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="@integer/scoreBoxWeight"
+                android:background="#FFFFFF"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:gravity="center"/>
+            <View
+                android:layout_height="fill_parent"
+                android:layout_width="0.2dp"
+                android:visibility="visible"
+                android:background="@android:color/black"/>
+        </LinearLayout>
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.2dp"
+            android:background="@android:color/black"
+            android:visibility="visible" />
+
+        <LinearLayout
+            android:id="@+id/datelayout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/LargeText"
+                android:background="#FFFFFF"
+                android:gravity="bottom"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:text="Date of Game:"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="date"
+                android:ems="5"
+                android:id="@+id/editTextGameDate2"
+                android:layout_weight="@integer/scoreBoxWeight" />
+
+        </LinearLayout>
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.2dp"
+            android:background="@android:color/black"
+            android:visibility="visible" />
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.2dp"
+            android:background="@android:color/black"
+            android:visibility="visible" />
+        <LinearLayout
+            android:id="@+id/historyPlayerNamesLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.01"
+            android:orientation="horizontal" >
+            <View
+                android:layout_width="0.2dp"
+                android:layout_height="fill_parent"
+                android:background="@android:color/white"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/histPLayName21"
+                android:layout_width="8dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="@integer/scoreBoxWeight"
+                android:background="#000000"
+                android:gravity="center_horizontal"
+                android:textColor="@android:color/white"
+                android:textSize="15sp" >
+            </TextView>
+
+            <View
+                android:layout_width="0.2dp"
+                android:layout_height="fill_parent"
+                android:background="@android:color/white"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/histPLayName22"
+                android:layout_width="8dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="@integer/scoreBoxWeight"
+                android:background="#000000"
+                android:gravity="center_horizontal"
+                android:textColor="@android:color/white"
+                android:textSize="15sp" >
+            </TextView>
+
+            <View
+                android:layout_width="0.2dp"
+                android:layout_height="fill_parent"
+                android:background="@android:color/white"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/histPLayName23"
+                android:layout_width="8dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="@integer/scoreBoxWeight"
+                android:background="#000000"
+                android:gravity="center_horizontal"
+                android:textColor="@android:color/white"
+                android:textSize="15sp" >
+            </TextView>
+
+            <View
+                android:layout_width="0.2dp"
+                android:layout_height="fill_parent"
+                android:background="@android:color/white"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/histPLayName24"
+                android:layout_width="8dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="@integer/scoreBoxWeight"
+                android:background="#000000"
+                android:gravity="center_horizontal"
+                android:textColor="@android:color/white"
+                android:textSize="15sp" >
+            </TextView>
+
+            <View
+                android:layout_width="0.2dp"
+                android:layout_height="fill_parent"
+                android:background="@android:color/white"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/histPLayName25"
+                android:layout_width="8dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="@integer/scoreBoxWeight"
+                android:background="#000000"
+                android:gravity="center_horizontal"
+                android:textColor="@android:color/white"
+                android:textSize="15sp" >
+            </TextView>
+
+            <View
+                android:layout_width="0.2dp"
+                android:layout_height="fill_parent"
+                android:background="@android:color/white"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/histPLayName26"
+                android:layout_width="8dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="@integer/scoreBoxWeight"
+                android:background="#000000"
+                android:gravity="center_horizontal"
+                android:textColor="@android:color/white"
+                android:textSize="15sp" >
+            </TextView>
+
+            <View
+                android:layout_width="0.2dp"
+                android:layout_height="fill_parent"
+                android:background="@android:color/white"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/histPLayName27"
+                android:layout_width="8dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="@integer/scoreBoxWeight"
+                android:background="#000000"
+                android:gravity="center_horizontal"
+                android:textColor="@android:color/white"
+                android:textSize="15sp" >
+            </TextView>
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/scorelayout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <View
+                android:layout_height="fill_parent"
+                android:layout_width="0.2dp"
+                android:visibility="visible"
+                android:background="@android:color/black"/>
+
+            <TextView
+                android:id="@+id/pc_Score21"
+                android:layout_width="8dp"
+                android:layout_height="match_parent"
+                android:layout_weight="@integer/scoreBoxWeight"
+                android:background="#FFFFFF"
+                android:clickable="true"
+                android:gravity="center"
+                android:onClick="onScoreClick"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_height="fill_parent"
+                android:layout_width="0.2dp"
+                android:visibility="visible"
+                android:background="@android:color/black"/>
+            <TextView
+                android:id="@+id/pc_Score22"
+                android:layout_width="8dp"
+                android:layout_height="match_parent"
+                android:layout_weight="@integer/scoreBoxWeight"
+                android:background="#FFFFFF"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:gravity="center"/>
+            <View
+                android:layout_height="fill_parent"
+                android:layout_width="0.2dp"
+                android:visibility="visible"
+                android:background="@android:color/black"/>
+            <TextView
+                android:id="@+id/pc_Score23"
+                android:layout_width="8dp"
+                android:layout_height="match_parent"
+                android:layout_weight="@integer/scoreBoxWeight"
+                android:background="#FFFFFF"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:gravity="center"/>
+            <View
+                android:layout_height="fill_parent"
+                android:layout_width="0.2dp"
+                android:visibility="visible"
+                android:background="@android:color/black"/>
+            <TextView
+                android:id="@+id/pc_Score24"
+                android:layout_width="8dp"
+                android:layout_height="match_parent"
+                android:layout_weight="@integer/scoreBoxWeight"
+                android:background="#FFFFFF"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:gravity="center"/>
+            <View
+                android:layout_height="fill_parent"
+                android:layout_width="0.2dp"
+                android:visibility="visible"
+                android:background="@android:color/black"/>
+            <TextView
+                android:id="@+id/pc_Score25"
+                android:layout_width="8dp"
+                android:layout_height="match_parent"
+                android:layout_weight="@integer/scoreBoxWeight"
+                android:background="#FFFFFF"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:gravity="center"/>
+            <View
+                android:layout_height="fill_parent"
+                android:layout_width="0.2dp"
+                android:visibility="visible"
+                android:background="@android:color/black"/>
+            <TextView
+                android:id="@+id/pc_Score26"
+                android:layout_width="8dp"
+                android:layout_height="match_parent"
+                android:layout_weight="@integer/scoreBoxWeight"
+                android:background="#FFFFFF"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:gravity="center"/>
+            <View
+                android:layout_height="fill_parent"
+                android:layout_width="0.2dp"
+                android:visibility="visible"
+                android:background="@android:color/black"/>
+            <TextView
+                android:id="@+id/pc_Score27"
+                android:layout_width="8dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="@integer/scoreBoxWeight"
+                android:background="#FFFFFF"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:gravity="center"/>
+            <View
+                android:layout_height="fill_parent"
+                android:layout_width="0.2dp"
+                android:visibility="visible"
+                android:background="@android:color/black"/>
+        </LinearLayout>
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.2dp"
+            android:background="@android:color/black"
+            android:visibility="visible" />
+
+        <LinearLayout
+            android:id="@+id/datelayout3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/LargeText"
+                android:background="#FFFFFF"
+                android:gravity="bottom"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:text="Date of Game:"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="date"
+                android:ems="5"
+                android:id="@+id/editText"
+                android:layout_weight="@integer/scoreBoxWeight" />
+
+        </LinearLayout>
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.2dp"
+            android:background="@android:color/black"
+            android:visibility="visible" />
+        <View
+            android:id="@+id/separator_vert"
+            android:layout_width="fill_parent"
+            android:layout_height="0.2dp"
+            android:background="@android:color/black"
+            android:visibility="visible" />
+        <LinearLayout
+            android:id="@+id/historyPlayerNamesLayout3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.01"
+            android:orientation="horizontal" >
+            <View
+                android:layout_width="0.2dp"
+                android:layout_height="fill_parent"
+                android:background="@android:color/white"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/histPLayName31"
+                android:layout_width="8dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="@integer/scoreBoxWeight"
+                android:background="#000000"
+                android:gravity="center_horizontal"
+                android:textColor="@android:color/white"
+                android:textSize="15sp" >
+            </TextView>
+
+            <View
+                android:layout_width="0.2dp"
+                android:layout_height="fill_parent"
+                android:background="@android:color/white"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/histPLayName32"
+                android:layout_width="8dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="@integer/scoreBoxWeight"
+                android:background="#000000"
+                android:gravity="center_horizontal"
+                android:textColor="@android:color/white"
+                android:textSize="15sp" >
+            </TextView>
+
+            <View
+                android:layout_width="0.2dp"
+                android:layout_height="fill_parent"
+                android:background="@android:color/white"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/histPLayName33"
+                android:layout_width="8dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="@integer/scoreBoxWeight"
+                android:background="#000000"
+                android:gravity="center_horizontal"
+                android:textColor="@android:color/white"
+                android:textSize="15sp" >
+            </TextView>
+
+            <View
+                android:layout_width="0.2dp"
+                android:layout_height="fill_parent"
+                android:background="@android:color/white"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/histPLayName34"
+                android:layout_width="8dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="@integer/scoreBoxWeight"
+                android:background="#000000"
+                android:gravity="center_horizontal"
+                android:textColor="@android:color/white"
+                android:textSize="15sp" >
+            </TextView>
+
+            <View
+                android:layout_width="0.2dp"
+                android:layout_height="fill_parent"
+                android:background="@android:color/white"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/histPLayName35"
+                android:layout_width="8dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="@integer/scoreBoxWeight"
+                android:background="#000000"
+                android:gravity="center_horizontal"
+                android:textColor="@android:color/white"
+                android:textSize="15sp" >
+            </TextView>
+
+            <View
+                android:layout_width="0.2dp"
+                android:layout_height="fill_parent"
+                android:background="@android:color/white"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/histPLayName36"
+                android:layout_width="8dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="@integer/scoreBoxWeight"
+                android:background="#000000"
+                android:gravity="center_horizontal"
+                android:textColor="@android:color/white"
+                android:textSize="15sp" >
+            </TextView>
+
+            <View
+                android:layout_width="0.2dp"
+                android:layout_height="fill_parent"
+                android:background="@android:color/white"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/histPLayName37"
+                android:layout_width="8dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="@integer/scoreBoxWeight"
+                android:background="#000000"
+                android:gravity="center_horizontal"
+                android:textColor="@android:color/white"
+                android:textSize="15sp" >
+            </TextView>
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/scorelayout3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <View
+                android:layout_height="fill_parent"
+                android:layout_width="0.2dp"
+                android:visibility="visible"
+                android:background="@android:color/black"/>
+
+            <TextView
+                android:id="@+id/pc_Score31"
+                android:layout_width="8dp"
+                android:layout_height="match_parent"
+                android:layout_weight="@integer/scoreBoxWeight"
+                android:background="#FFFFFF"
+                android:clickable="true"
+                android:gravity="center"
+                android:onClick="onScoreClick"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_height="fill_parent"
+                android:layout_width="0.2dp"
+                android:visibility="visible"
+                android:background="@android:color/black"/>
+            <TextView
+                android:id="@+id/pc_Score32"
+                android:layout_width="8dp"
+                android:layout_height="match_parent"
+                android:layout_weight="@integer/scoreBoxWeight"
+                android:background="#FFFFFF"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:gravity="center"/>
+            <View
+                android:layout_height="fill_parent"
+                android:layout_width="0.2dp"
+                android:visibility="visible"
+                android:background="@android:color/black"/>
+            <TextView
+                android:id="@+id/pc_Score33"
+                android:layout_width="8dp"
+                android:layout_height="match_parent"
+                android:layout_weight="@integer/scoreBoxWeight"
+                android:background="#FFFFFF"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:gravity="center"/>
+            <View
+                android:layout_height="fill_parent"
+                android:layout_width="0.2dp"
+                android:visibility="visible"
+                android:background="@android:color/black"/>
+            <TextView
+                android:id="@+id/pc_Score34"
+                android:layout_width="8dp"
+                android:layout_height="match_parent"
+                android:layout_weight="@integer/scoreBoxWeight"
+                android:background="#FFFFFF"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:gravity="center"/>
+            <View
+                android:layout_height="fill_parent"
+                android:layout_width="0.2dp"
+                android:visibility="visible"
+                android:background="@android:color/black"/>
+            <TextView
+                android:id="@+id/pc_Score35"
+                android:layout_width="8dp"
+                android:layout_height="match_parent"
+                android:layout_weight="@integer/scoreBoxWeight"
+                android:background="#FFFFFF"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:gravity="center"/>
+            <View
+                android:layout_height="fill_parent"
+                android:layout_width="0.2dp"
+                android:visibility="visible"
+                android:background="@android:color/black"/>
+            <TextView
+                android:id="@+id/pc_Score36"
+                android:layout_width="8dp"
+                android:layout_height="match_parent"
+                android:layout_weight="@integer/scoreBoxWeight"
+                android:background="#FFFFFF"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:gravity="center"/>
+            <View
+                android:layout_height="fill_parent"
+                android:layout_width="0.2dp"
+                android:visibility="visible"
+                android:background="@android:color/black"/>
+            <TextView
+                android:id="@+id/pc_Score37"
+                android:layout_width="8dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="@integer/scoreBoxWeight"
+                android:background="#FFFFFF"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:gravity="center"/>
+            <View
+                android:layout_height="fill_parent"
+                android:layout_width="0.2dp"
+                android:visibility="visible"
+                android:background="@android:color/black"/>
+        </LinearLayout>
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.2dp"
+            android:background="@android:color/black"
+            android:visibility="visible" />
+
+    </LinearLayout>
+
+</RelativeLayout>

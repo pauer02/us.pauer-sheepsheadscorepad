@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+ <color name="sit_out_clr">#FFAAAAAA</color>
+ <color name="picker_clr">#FF44AA44</color>
+ <color name="partner_clr">#FFaaaa44</color>
+ <color name="player_clr">#FF4444aa</color>
+ <color name="picker_won_clr">#44aa44</color>	
+ <color name="picker_won_no_schneid_clr">#22cc22</color>	
+ <color name="picker_won_no_trick_clr">#00ff00</color>	
+ <color name="picker_lost_clr">#aa2222</color>	
+ <color name="picker_lost_no_schneid_clr">#cc2222</color>	
+ <color name="picker_lost_no_trick_clr">#ff0000</color>	
+ <color name="partner_won_clr">#aaaa44</color>	
+ <color name="partner_won_no_schneid_clr">#cccc22</color>	
+ <color name="partner_won_no_trick_clr">#ffff00</color>	
+ <color name="partner_lost_clr">#dd8300</color>	
+ <color name="partner_lost_no_schneid_clr">#ee9400</color>	
+ <color name="partner_lost_no_trick_clr">#ffa500</color>	
+ <color name="player_won_clr">#4444aa</color>	
+ <color name="player_won_no_schneid_clr">#2222cc</color>	
+ <color name="player_won_no_trick_clr">#0000ff</color>	
+ <color name="player_lost_clr">#aa44aa</color>	
+ <color name="player_lost_no_schneid_clr">#cc22cc</color>	
+ <color name="player_lost_no_trick_clr">#ff00ff</color>	
+</resources>
+

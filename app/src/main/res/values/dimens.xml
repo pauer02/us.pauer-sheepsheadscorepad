@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="SmallText">12sp</dimen>
+    <dimen name="TinyMargin">1sp</dimen>
+    <dimen name="MedMargin">5sp</dimen>
+    <dimen name="LargeText">23sp</dimen>
+    <dimen name="MediumText">18sp</dimen>
+
+    <integer name="numBoxWeight">1</integer>
+    <integer name="scoreBoxWeight">3</integer>
+    <integer name="buttonBoxWeight">6</integer>
+    <integer name="topRowsWeight">1</integer>
+    <integer name="bottomRowsWeight">10</integer>
+    <integer name="scrollAreaWeight">180</integer>
+
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+</resources>

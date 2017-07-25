@@ -1,0 +1,542 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:id="@+id/masterlayout"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	tools:context=".ScoreActivity" 
+>
+
+	<LinearLayout
+		android:id="@+id/screenLayout"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:orientation="vertical" >
+
+		<View
+			android:id="@+id/separator_vert_white"
+			android:layout_width="fill_parent"
+			android:layout_height="0.2dp"
+			android:background="@android:color/white"
+			android:visibility="visible" />
+
+		<LinearLayout
+			android:id="@+id/playerActionLayout"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_weight="@integer/topRowsWeight"
+			android:orientation="horizontal" >
+
+			<TextView
+				android:id="@+id/pc_Action_HandNum"
+				android:layout_width="2dp"
+				android:layout_height="wrap_content"
+				android:layout_weight="@integer/numBoxWeight"
+				android:background="#000000"
+				android:gravity="center_horizontal"
+				android:textColor="@android:color/white"
+				android:textSize="15sp" >
+			</TextView>
+
+			<View
+				android:layout_width="0.2dp"
+				android:layout_height="fill_parent"
+				android:background="@android:color/white"
+				android:visibility="visible" />
+
+			<TextView
+				android:id="@+id/pc_Action1"
+				android:layout_width="8dp"
+				android:layout_height="wrap_content"
+				android:layout_weight="@integer/scoreBoxWeight"
+				android:background="#000000"
+				android:gravity="center_horizontal"
+				android:textColor="@android:color/white"
+				android:textSize="15sp" >
+			</TextView>
+
+			<View
+				android:layout_width="0.2dp"
+				android:layout_height="fill_parent"
+				android:background="@android:color/white"
+				android:visibility="visible" />
+
+			<TextView
+				android:id="@+id/pc_Action2"
+				android:layout_width="8dp"
+				android:layout_height="wrap_content"
+				android:layout_weight="@integer/scoreBoxWeight"
+				android:background="#000000"
+				android:gravity="center_horizontal"
+				android:textColor="@android:color/white"
+				android:textSize="15sp" >
+			</TextView>
+
+			<View
+				android:layout_width="0.2dp"
+				android:layout_height="fill_parent"
+				android:background="@android:color/white"
+				android:visibility="visible" />
+
+			<TextView
+				android:id="@+id/pc_Action3"
+				android:layout_width="8dp"
+				android:layout_height="wrap_content"
+				android:layout_weight="@integer/scoreBoxWeight"
+				android:background="#000000"
+				android:gravity="center_horizontal"
+				android:textColor="@android:color/white"
+				android:textSize="15sp" >
+			</TextView>
+
+			<View
+				android:layout_width="0.2dp"
+				android:layout_height="fill_parent"
+				android:background="@android:color/white"
+				android:visibility="visible" />
+
+			<TextView
+				android:id="@+id/pc_Action4"
+				android:layout_width="8dp"
+				android:layout_height="wrap_content"
+				android:layout_weight="@integer/scoreBoxWeight"
+				android:background="#000000"
+				android:gravity="center_horizontal"
+				android:textColor="@android:color/white"
+				android:textSize="15sp" >
+			</TextView>
+
+			<View
+				android:layout_width="0.2dp"
+				android:layout_height="fill_parent"
+				android:background="@android:color/white"
+				android:visibility="visible" />
+
+			<TextView
+				android:id="@+id/pc_Action5"
+				android:layout_width="8dp"
+				android:layout_height="wrap_content"
+				android:layout_weight="@integer/scoreBoxWeight"
+				android:background="#000000"
+				android:gravity="center_horizontal"
+				android:textColor="@android:color/white"
+				android:textSize="15sp" >
+			</TextView>
+
+			<View
+				android:layout_width="0.2dp"
+				android:layout_height="fill_parent"
+				android:background="@android:color/white"
+				android:visibility="visible" />
+
+			<TextView
+				android:id="@+id/pc_Action6"
+				android:layout_width="8dp"
+				android:layout_height="wrap_content"
+				android:layout_weight="@integer/scoreBoxWeight"
+				android:background="#000000"
+				android:gravity="center_horizontal"
+				android:textColor="@android:color/white"
+				android:textSize="15sp" >
+			</TextView>
+
+			<View
+				android:layout_width="0.2dp"
+				android:layout_height="fill_parent"
+				android:background="@android:color/white"
+				android:visibility="visible" />
+
+			<TextView
+				android:id="@+id/pc_Action7"
+				android:layout_width="8dp"
+				android:layout_height="wrap_content"
+				android:layout_weight="@integer/scoreBoxWeight"
+				android:background="#000000"
+				android:gravity="center_horizontal"
+				android:textColor="@android:color/white"
+				android:textSize="15sp" >
+			</TextView>
+
+			<View
+				android:layout_width="4dp"
+				android:layout_height="fill_parent"
+				android:background="@android:color/white"
+				android:visibility="visible" />
+
+			<TextView
+				android:id="@+id/pc_Action_End"
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:layout_weight="@integer/buttonBoxWeight"
+				android:background="#000000"
+				android:gravity="center_horizontal"
+				android:text="@string/penalty_label"
+				android:textColor="#FF0000"
+				android:textSize="15sp" >
+			</TextView>
+		</LinearLayout>
+
+		<LinearLayout
+			android:id="@+id/playerNameLayout"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="horizontal"
+			android:layout_weight="@integer/topRowsWeight" >
+
+			<TextView
+				android:id="@+id/pc_Name_HandNum"
+				android:layout_width="2dp"
+				android:layout_height="wrap_content"
+				android:layout_weight="@integer/numBoxWeight"
+				android:background="#FFFFFF"
+				android:gravity="center_horizontal"
+				android:textSize="15sp"
+				android:textStyle="bold" />
+
+			<View
+				android:layout_width="0.2dp"
+				android:layout_height="fill_parent"
+				android:background="@android:color/black"
+				android:visibility="visible" />
+
+			<TextView
+				android:id="@+id/pc_Name1"
+				android:layout_width="8dp"
+				android:layout_height="wrap_content"
+				android:layout_weight="@integer/scoreBoxWeight"
+				android:background="#FFFFFF"
+				android:clickable="true"
+				android:gravity="center_horizontal"
+				android:onClick="onNameClick"
+				android:textSize="15sp"
+				android:textStyle="bold" />
+
+			<View
+				android:layout_width="0.2dp"
+				android:layout_height="fill_parent"
+				android:background="@android:color/black"
+				android:visibility="visible" />
+
+			<TextView
+				android:id="@+id/pc_Name2"
+				android:layout_width="8dp"
+				android:layout_height="wrap_content"
+				android:layout_weight="@integer/scoreBoxWeight"
+				android:background="#FFFFFF"
+				android:clickable="true"
+				android:gravity="center_horizontal"
+				android:onClick="onNameClick"
+				android:textSize="15sp"
+				android:textStyle="bold" />
+
+			<View
+				android:layout_width="0.2dp"
+				android:layout_height="fill_parent"
+				android:background="@android:color/black"
+				android:visibility="visible" />
+
+			<TextView
+				android:id="@+id/pc_Name3"
+				android:layout_width="8dp"
+				android:layout_height="wrap_content"
+				android:layout_weight="@integer/scoreBoxWeight"
+				android:background="#FFFFFF"
+				android:clickable="true"
+				android:gravity="center_horizontal"
+				android:onClick="onNameClick"
+				android:textSize="15sp"
+				android:textStyle="bold" />
+
+			<View
+				android:layout_width="0.2dp"
+				android:layout_height="fill_parent"
+				android:background="@android:color/black"
+				android:visibility="visible" />
+
+			<TextView
+				android:id="@+id/pc_Name4"
+				android:layout_width="8dp"
+				android:layout_height="wrap_content"
+				android:layout_weight="@integer/scoreBoxWeight"
+				android:background="#FFFFFF"
+				android:clickable="true"
+				android:gravity="center_horizontal"
+				android:onClick="onNameClick"
+				android:textSize="15sp"
+				android:textStyle="bold" />
+
+			<View
+				android:layout_width="0.2dp"
+				android:layout_height="fill_parent"
+				android:background="@android:color/black"
+				android:visibility="visible" />
+
+			<TextView
+				android:id="@+id/pc_Name5"
+				android:layout_width="8dp"
+				android:layout_height="wrap_content"
+				android:layout_weight="@integer/scoreBoxWeight"
+				android:background="#FFFFFF"
+				android:clickable="true"
+				android:gravity="center_horizontal"
+				android:onClick="onNameClick"
+				android:textSize="15sp"
+				android:textStyle="bold" />
+
+			<View
+				android:layout_width="0.2dp"
+				android:layout_height="fill_parent"
+				android:background="@android:color/black"
+				android:visibility="visible" />
+
+			<TextView
+				android:id="@+id/pc_Name6"
+				android:layout_width="8dp"
+				android:layout_height="wrap_content"
+				android:layout_weight="@integer/scoreBoxWeight"
+				android:background="#FFFFFF"
+				android:clickable="true"
+				android:gravity="center_horizontal"
+				android:onClick="onNameClick"
+				android:textSize="15sp"
+				android:textStyle="bold" />
+
+			<View
+				android:layout_width="0.2dp"
+				android:layout_height="fill_parent"
+				android:background="@android:color/black"
+				android:visibility="visible" />
+
+			<TextView
+				android:id="@+id/pc_Name7"
+				android:layout_width="8dp"
+				android:layout_height="wrap_content"
+				android:layout_weight="@integer/scoreBoxWeight"
+				android:background="#FFFFFF"
+				android:clickable="true"
+				android:gravity="center_horizontal"
+				android:onClick="onNameClick"
+				android:textSize="15sp"
+				android:textStyle="bold" />
+
+			<View
+				android:layout_width="4dp"
+				android:layout_height="fill_parent"
+				android:background="@android:color/black"
+				android:visibility="visible" />
+
+			<TextView
+				android:id="@+id/pc_Name_End"
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:layout_weight="@integer/buttonBoxWeight"
+				android:background="#FFFFFF"
+				android:clickable="true"
+				android:gravity="center_horizontal"
+				android:onClick="onNameClick"
+				android:textSize="15sp"
+				android:textStyle="bold" />
+		</LinearLayout>
+
+		<View
+			android:id="@+id/separator_vert"
+			android:layout_width="fill_parent"
+			android:layout_height="0.2dp"
+			android:background="@android:color/black"
+			android:visibility="visible" />
+
+		<ScrollView
+			android:id="@+id/scrollScoreLayout"
+			android:layout_width="match_parent"
+			android:layout_height="332dp"
+			android:layout_marginBottom="@dimen/TinyMargin"
+			android:layout_weight="@integer/scrollAreaWeight"
+			android:fillViewport="true" >
+
+			<LinearLayout
+				android:id="@+id/linearScoreLayout"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:orientation="vertical" >
+			</LinearLayout>
+		</ScrollView>
+		<View
+			android:id="@+id/separator_vert_black"
+			android:layout_width="fill_parent"
+			android:layout_height="0.2dp"
+			android:background="@android:color/black"
+			android:visibility="visible" />
+		
+		<LinearLayout
+			android:id="@+id/playerNotesLayout"
+			android:layout_width="match_parent"
+			android:layout_height="50dp"
+			android:orientation="horizontal" >
+
+			<TextView
+				android:id="@+id/pc_Note_HandNum"
+				android:layout_width="2dp"
+				android:layout_height="match_parent"
+				android:layout_weight="@integer/numBoxWeight"
+				android:background="#000000"
+				android:gravity="center_horizontal"
+				android:textColor="@android:color/white"
+				android:textSize="@dimen/LargeText" >
+			</TextView>
+
+			<View
+				android:layout_width="0.2dp"
+				android:layout_height="fill_parent"
+				android:background="@android:color/white"
+				android:visibility="visible" />
+
+			<TextView
+				android:id="@+id/pc_Note1"
+				android:layout_width="8dp"
+				android:layout_height="match_parent"
+				android:layout_weight="@integer/scoreBoxWeight"
+				android:background="#000000"
+				android:gravity="center_horizontal"
+				android:clickable="true"
+				android:onClick="onNotesClick"
+				android:textColor="@android:color/white"
+				android:tag="1"
+				android:textSize="@dimen/LargeText" >
+			</TextView>
+
+			<View
+				android:layout_width="0.2dp"
+				android:layout_height="fill_parent"
+				android:background="@android:color/white"
+				android:visibility="visible" />
+
+			<TextView
+				android:id="@+id/pc_Note2"
+				android:layout_width="8dp"
+				android:layout_height="match_parent"
+				android:layout_weight="@integer/scoreBoxWeight"
+				android:background="#000000"
+				android:gravity="center_horizontal"
+				android:clickable="true"
+				android:onClick="onNotesClick"
+				android:textColor="@android:color/white"
+				android:tag="2"
+				android:textSize="@dimen/LargeText" >
+			</TextView>
+
+			<View
+				android:layout_width="0.2dp"
+				android:layout_height="fill_parent"
+				android:background="@android:color/white"
+				android:visibility="visible" />
+
+			<TextView
+				android:id="@+id/pc_Note3"
+				android:layout_width="8dp"
+				android:layout_height="match_parent"
+				android:layout_weight="@integer/scoreBoxWeight"
+				android:background="#000000"
+				android:gravity="center_horizontal"
+				android:clickable="true"
+				android:onClick="onNotesClick"
+				android:textColor="@android:color/white"
+				android:tag="3"
+				android:textSize="@dimen/LargeText" >
+			</TextView>
+
+			<View
+				android:layout_width="0.2dp"
+				android:layout_height="fill_parent"
+				android:background="@android:color/white"
+				android:visibility="visible" />
+
+			<TextView
+				android:id="@+id/pc_Note4"
+				android:layout_width="8dp"
+				android:layout_height="match_parent"
+				android:layout_weight="@integer/scoreBoxWeight"
+				android:background="#000000"
+				android:gravity="center_horizontal"
+				android:clickable="true"
+				android:onClick="onNotesClick"
+				android:textColor="@android:color/white"
+				android:tag="4"
+				android:textSize="@dimen/LargeText" >
+			</TextView>
+
+			<View
+				android:layout_width="0.2dp"
+				android:layout_height="fill_parent"
+				android:background="@android:color/white"
+				android:visibility="visible" />
+
+			<TextView
+				android:id="@+id/pc_Note5"
+				android:layout_width="8dp"
+				android:layout_height="match_parent"
+				android:layout_weight="@integer/scoreBoxWeight"
+				android:background="#000000"
+				android:gravity="center_horizontal"
+				android:clickable="true"
+				android:textColor="@android:color/white"
+				android:onClick="onNotesClick"
+				android:tag="5"
+				android:textSize="@dimen/LargeText" >
+			</TextView>
+
+			<View
+				android:layout_width="0.2dp"
+				android:layout_height="fill_parent"
+				android:background="@android:color/white"
+				android:visibility="visible" />
+
+			<TextView
+				android:id="@+id/pc_Note6"
+				android:layout_width="8dp"
+				android:layout_height="match_parent"
+				android:layout_weight="@integer/scoreBoxWeight"
+				android:background="#000000"
+				android:gravity="center_horizontal"
+				android:clickable="true"
+				android:onClick="onNotesClick"
+				android:textColor="@android:color/white"
+				android:tag="6"
+				android:textSize="@dimen/LargeText" >
+			</TextView>
+
+			<View
+				android:layout_width="0.2dp"
+				android:layout_height="fill_parent"
+				android:background="@android:color/white"
+				android:visibility="visible" />
+
+			<TextView
+				android:id="@+id/pc_Note7"
+				android:layout_width="8dp"
+				android:layout_height="match_parent"
+				android:layout_weight="@integer/scoreBoxWeight"
+				android:background="#000000"
+				android:gravity="center_horizontal"
+				android:clickable="true"
+				android:onClick="onNotesClick"
+				android:textColor="@android:color/white"
+				android:textSize="@dimen/LargeText" 
+				android:tag="7">
+			</TextView>
+
+			<View
+				android:layout_width="4dp"
+				android:layout_height="fill_parent"
+				android:background="@android:color/black"
+				android:visibility="visible" />
+
+			<View
+		    	android:layout_height="fill_parent"
+		    	android:layout_width="0dp"
+		    	android:layout_weight="@integer/buttonBoxWeight"
+		    	android:background="@android:color/black" >
+
+			</View>
+		</LinearLayout>
+	</LinearLayout>
+
+</RelativeLayout>
