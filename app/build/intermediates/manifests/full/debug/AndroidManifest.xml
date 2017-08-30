@@ -33,6 +33,9 @@
         <activity
             android:name="us.pauer.android.sheepsheadscorepad.HelpActivity"
             android:label="@string/title_activity_help" />
+        <activity
+            android:name="us.pauer.android.sheepsheadscorepad.HistoryActivity"
+            android:label="History" />
     </application>
 
 </manifest>
