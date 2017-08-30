@@ -1,14 +1,14 @@
 [
     {
-        "merged": "C:\\Users\\Chris\\AndroidStudioProjects\\SheepsheadScorepad\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi\\ic_action_help.png",
-        "source": "C:\\Users\\Chris\\AndroidStudioProjects\\SheepsheadScorepad\\app\\src\\main\\res\\drawable-xxhdpi\\ic_action_help.png"
+        "merged": "C:\\Users\\Chris\\AndroidStudioProjects\\us.pauer-sheepsheadscorepad\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi\\ic_history.png",
+        "source": "C:\\Users\\Chris\\AndroidStudioProjects\\us.pauer-sheepsheadscorepad\\app\\src\\main\\res\\drawable-xxhdpi\\ic_history.png"
     },
     {
-        "merged": "C:\\Users\\Chris\\AndroidStudioProjects\\SheepsheadScorepad\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi\\ic_history.png",
-        "source": "C:\\Users\\Chris\\AndroidStudioProjects\\SheepsheadScorepad\\app\\src\\main\\res\\drawable-xxhdpi\\ic_history.png"
+        "merged": "C:\\Users\\Chris\\AndroidStudioProjects\\us.pauer-sheepsheadscorepad\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi\\ic_action_help.png",
+        "source": "C:\\Users\\Chris\\AndroidStudioProjects\\us.pauer-sheepsheadscorepad\\app\\src\\main\\res\\drawable-xxhdpi\\ic_action_help.png"
     },
     {
-        "merged": "C:\\Users\\Chris\\AndroidStudioProjects\\SheepsheadScorepad\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi\\ic_email.png",
-        "source": "C:\\Users\\Chris\\AndroidStudioProjects\\SheepsheadScorepad\\app\\src\\main\\res\\drawable-xxhdpi\\ic_email.png"
+        "merged": "C:\\Users\\Chris\\AndroidStudioProjects\\us.pauer-sheepsheadscorepad\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi\\ic_email.png",
+        "source": "C:\\Users\\Chris\\AndroidStudioProjects\\us.pauer-sheepsheadscorepad\\app\\src\\main\\res\\drawable-xxhdpi\\ic_email.png"
     }
 ]

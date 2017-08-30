@@ -57,7 +57,7 @@
     <string name="playerremoved">Player Removed</string>
     <string name="cancel">Cancel</string>
     <string name="ok">OK</string>
-    <string name="title_activity_help">HelpActivity</string>
+    <string name="title_activity_help">Help</string>
 
 
 </resources>

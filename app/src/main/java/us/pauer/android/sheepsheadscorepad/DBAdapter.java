@@ -1,8 +1,11 @@
 package us.pauer.android.sheepsheadscorepad;
 
 
-import java.sql.Date;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.Arrays;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.Observer;
 
 import android.content.ContentValues;
@@ -65,6 +68,7 @@ public class DBAdapter extends Observable<Observer>  {
 	static final String COL_HIST_PLAYER_POSITION = "position";
 	static final String COL_HIST_PLAYER_PENALTY = "penalty";
 	static final String COL_HIST_PLAYER_NOTES = "notes";
+	static final String COL_HIST_PLAYER_DATE = "hist_date";
 
 
 
@@ -119,7 +123,7 @@ public class DBAdapter extends Observable<Observer>  {
 			String sql = "create table "+TABLE_GAME+" (" +
 					KEY_ROWID + " integer primary key autoincrement, "
 					+ COL_GAME_ACTIVE + " integer not null, "
-					+ COL_GAME_DATE + " numeric not null);";
+					+ COL_GAME_DATE + " text not null);";
 			db.execSQL(sql);
 		}
 
@@ -186,7 +190,8 @@ public class DBAdapter extends Observable<Observer>  {
 					+ COL_HIST_PLAYER_POSITION + " integer not null, "
 					+ COL_HIST_PLAYER_SCORE + " integer not null, "
 					+ COL_HIST_PLAYER_PENALTY + " integer not null, "
-					+ COL_HIST_PLAYER_NOTES + " text);";
+					+ COL_HIST_PLAYER_NOTES + " text, "
+					+ COL_HIST_PLAYER_DATE + " text not null);";
 			db.execSQL(sql);
 		}
 
@@ -225,8 +230,11 @@ public class DBAdapter extends Observable<Observer>  {
 	public long newGame(SQLiteDatabase db) {
 		setCurrentGameAsInactive();
 		ContentValues initialValues = new ContentValues();
+		DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
+		Date date = new Date();
+		String gameDate = dateFormat.format(date);
 		initialValues.put(COL_GAME_ACTIVE, 1);
-		initialValues.put(COL_GAME_DATE, "current_date");
+		initialValues.put(COL_GAME_DATE, gameDate);
 		long success = db.insert(TABLE_GAME, null, initialValues);
 		return success;
 	}
@@ -439,7 +447,21 @@ public class DBAdapter extends Observable<Observer>  {
 		}
 		return currentGameId;
 	}
-	
+
+	public String getCurrentGameDate() {
+		String gameDate = "";
+		Cursor c = db.query(TABLE_GAME, new String[] {KEY_ROWID, COL_GAME_DATE}, COL_GAME_ACTIVE +" =?", new String[]{"1"}, "", "", "");
+		c.moveToFirst();
+		int count = c.getCount();
+		if (count==0) {
+			return "";
+		}
+		gameDate = c.getString(c.getColumnIndex(COL_GAME_DATE));
+		return gameDate;
+	}
+
+
+
 	public void scoreHand(int handNumber, int doublers, boolean pickerWin, 
 		    boolean noSchneid, boolean noTrick, int[] playerArray, int[] scores) {
 		updateHand(handNumber, doublers, pickerWin, 
@@ -653,10 +675,13 @@ public class DBAdapter extends Observable<Observer>  {
         return valCursor.getString(valCursor.getColumnIndex(COL_SETTING_VALUE));
     }
 
-	private void updateHistory() {
+
+
+	public void updateHistory() {
 		// check if there is an active game
 		if (currentGameHasScoredHands())
 		{
+			String gameDate = getCurrentGameDate();
 			// if so  get players, scores, penatlies and notes
 			Cursor players = getPlayers();
 			int lastHand = getFurthestHandScored();
@@ -674,9 +699,24 @@ public class DBAdapter extends Observable<Observer>  {
 				cv.put(COL_HIST_PLAYER_PENALTY, penalty);
 				cv.put(COL_HIST_PLAYER_NOTES, note);
 				cv.put(COL_HIST_PLAYER_SCORE, lastHandScores[position]);
-				db.insert(TABLE_HIST_PLAYER, null, cv);			}
+				cv.put(COL_HIST_PLAYER_DATE, gameDate);
+				db.insert(TABLE_HIST_PLAYER, null, cv);
+				players.moveToNext();
+			}
 		}
 	}
+
+	public Cursor getHistory() {
+
+
+
+			Cursor scoreCursor = db.query(TABLE_HIST_PLAYER, null,
+				"", new String[]{}, "", "", COL_HIST_PLAYER_GAME + " DESC, "+COL_HIST_PLAYER_POSITION);
+
+		int stuff = scoreCursor.getCount();
+		return scoreCursor;
+	}
+
 
 
 

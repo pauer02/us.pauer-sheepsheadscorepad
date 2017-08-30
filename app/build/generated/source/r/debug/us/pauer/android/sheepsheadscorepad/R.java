@@ -68,9 +68,9 @@ public final class R {
         public static final int datelayout3=0x7f0b0026;
         public static final int double_limit_text=0x7f0b0073;
         public static final int double_on_bump_checkbox=0x7f0b0070;
-        public static final int editText=0x7f0b0027;
         public static final int editTextGameDate1=0x7f0b0003;
         public static final int editTextGameDate2=0x7f0b0015;
+        public static final int editTextGameDate3=0x7f0b0027;
         public static final int email=0x7f0b007d;
         public static final int email_default_text=0x7f0b0078;
         public static final int emsView9=0x7f0b0075;
@@ -263,15 +263,8 @@ public final class R {
     public static final class style {
         /**  API 11 theme customizations can go here. 
  API 14 theme customizations can go here. 
-
-            Theme customizations available in newer API levels can go in
-            res/values-vXX/styles.xml, while customizations related to
-            backward-compatibility can go here.
-		
          */
         public static final int AppBaseTheme=0x7f040000;
-        /**  All customizations that are NOT specific to a particular API-level can go here. 
-         */
         public static final int AppTheme=0x7f040001;
     }
 }

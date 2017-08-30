@@ -3,7 +3,7 @@ apply plugin: 'com.android.application'
 android {
     signingConfigs {
         bigfoot1 {
-            keyAlias 'bigfoot1'
+            keyAlias 'bigfoot'
             keyPassword 'bigfoot1'
             storeFile file('/home/chris/android-studio/bin/bigfoot')
             storePassword 'bigfoot1'
@@ -22,10 +22,7 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
         }
-        debug {
-            signingConfig signingConfigs.bigfoot1
-            debuggable true
-        }
+
     }
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_7

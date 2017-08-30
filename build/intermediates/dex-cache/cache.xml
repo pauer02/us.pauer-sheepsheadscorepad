@@ -2,40 +2,22 @@
 <items version="2" >
 
     <item
-        is-multidex="false"
-        jar="/home/chris/Android/Sdk/extras/android/m2repository/com/android/support/support-v4/18.0.0/support-v4-18.0.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.1"
-        sha1="44ec51e9d395a47aab135e5e1b556c0007442156">
-        <dex dex="/home/chris/StudioProjects/sheepsheadscorepad/SheepsheadScorepad/app/build/intermediates/pre-dexed/debug/support-v4-18.0.0_28ae9d295bc01a891b66c10fd79da93102f33b8e.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/chris/Android/Sdk/extras/android/m2repository/com/android/support/support-v4/18.0.0/support-v4-18.0.0.jar"
+        is-multidex="true"
+        jar="C:\Users\Chris\AndroidStudioProjects\us.pauer-sheepsheadscorepad\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.1"
-        sha1="44ec51e9d395a47aab135e5e1b556c0007442156">
-        <dex dex="/home/chris/StudioProjects/sheepsheadscorepad/SheepsheadScorepad/app/build/intermediates/pre-dexed/debug/support-v4-18.0.0_28ae9d295bc01a891b66c10fd79da93102f33b8e.jar" />
+        sha1="8c38b507086bdf4957071d7150e15ebadf9be1e2">
+        <dex dex="C:\Users\Chris\AndroidStudioProjects\us.pauer-sheepsheadscorepad\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_069f1e1369dd57df87b68605075f91de05d41802\classes.dex" />
     </item>
     <item
-        is-multidex="false"
-        jar="/home/chris/StudioProjects/sheepsheadscorepad/SheepsheadScorepad/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        is-multidex="true"
+        jar="C:\Users\Chris\AndroidStudioProjects\us.pauer-sheepsheadscorepad\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.1"
-        sha1="885ccfb80ad6f8f93b3c828b57edf8f9e0c47b23">
-        <dex dex="/home/chris/StudioProjects/sheepsheadscorepad/SheepsheadScorepad/app/build/intermediates/pre-dexed/debug/instant-run_53aa0a80044141a840c95464705c6be3c185f782.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/chris/StudioProjects/sheepsheadscorepad/SheepsheadScorepad/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.1"
-        sha1="ab9748551d345eae499fe63308554ae72da2f07a">
-        <dex dex="/home/chris/StudioProjects/sheepsheadscorepad/SheepsheadScorepad/app/build/intermediates/pre-dexed/debug/instant-run-bootstrap_c2f5b1fdcc352a55ebf18b5e1dadd384135f7648.jar" />
+        sha1="3be78ebc2706b2e1fe2f12d5726887a92d6c183b">
+        <dex dex="C:\Users\Chris\AndroidStudioProjects\us.pauer-sheepsheadscorepad\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_e74dd2786bc33f6be45e379671ab39ded4944a11\classes.dex" />
     </item>
 
 </items>

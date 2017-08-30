@@ -600,7 +600,7 @@
                 android:layout_height="wrap_content"
                 android:inputType="date"
                 android:ems="5"
-                android:id="@+id/editText"
+                android:id="@+id/editTextGameDate3"
                 android:layout_weight="@integer/scoreBoxWeight" />
 
         </LinearLayout>

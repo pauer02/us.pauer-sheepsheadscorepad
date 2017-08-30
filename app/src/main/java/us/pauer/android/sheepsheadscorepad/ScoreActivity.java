@@ -75,6 +75,10 @@ public class ScoreActivity extends Activity implements Observer  {
 				Intent k = new Intent(this, HelpActivity.class);
 				startActivity(k);
 				return true;
+			case R.id.history:
+				Intent m = new Intent(this, HistoryActivity.class);
+				startActivity(m);
+				return true;
 		}
 		
 		return false;

@@ -1,6 +1,6 @@
 [
     {
-        "outputFile": "C:\\Users\\Chris\\AndroidStudioProjects\\SheepsheadScorepad\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v14\\values-v14.xml",
+        "outputFile": "C:\\Users\\Chris\\AndroidStudioProjects\\us.pauer-sheepsheadscorepad\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v14\\values-v14.xml",
         "map": [
             {
                 "to": {
@@ -12,7 +12,7 @@
                     "endOffset": 192
                 },
                 "from": {
-                    "file": "C:\\Users\\Chris\\AndroidStudioProjects\\SheepsheadScorepad\\app\\src\\main\\res\\values-v14\\styles.xml",
+                    "file": "C:\\Users\\Chris\\AndroidStudioProjects\\us.pauer-sheepsheadscorepad\\app\\src\\main\\res\\values-v14\\styles.xml",
                     "position": {
                         "startLine": 7,
                         "startColumn": 1,
