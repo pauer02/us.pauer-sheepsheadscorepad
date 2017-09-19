@@ -20,16 +20,16 @@
         "source": "C:\\Users\\Chris\\AndroidStudioProjects\\us.pauer-sheepsheadscorepad\\app\\src\\main\\res\\drawable-mdpi\\ic_email.png"
     },
     {
-        "merged": "C:\\Users\\Chris\\AndroidStudioProjects\\us.pauer-sheepsheadscorepad\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\ic_history.png",
-        "source": "C:\\Users\\Chris\\AndroidStudioProjects\\us.pauer-sheepsheadscorepad\\app\\src\\main\\res\\drawable-mdpi\\ic_history.png"
-    },
-    {
         "merged": "C:\\Users\\Chris\\AndroidStudioProjects\\us.pauer-sheepsheadscorepad\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\ic_action_new_game.png",
         "source": "C:\\Users\\Chris\\AndroidStudioProjects\\us.pauer-sheepsheadscorepad\\app\\src\\main\\res\\drawable-mdpi\\ic_action_new_game.png"
     },
     {
         "merged": "C:\\Users\\Chris\\AndroidStudioProjects\\us.pauer-sheepsheadscorepad\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\ic_action_add_player.png",
         "source": "C:\\Users\\Chris\\AndroidStudioProjects\\us.pauer-sheepsheadscorepad\\app\\src\\main\\res\\drawable-mdpi\\ic_action_add_player.png"
+    },
+    {
+        "merged": "C:\\Users\\Chris\\AndroidStudioProjects\\us.pauer-sheepsheadscorepad\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\ic_action_history.png",
+        "source": "C:\\Users\\Chris\\AndroidStudioProjects\\us.pauer-sheepsheadscorepad\\app\\src\\main\\res\\drawable-mdpi\\ic_action_history.png"
     },
     {
         "merged": "C:\\Users\\Chris\\AndroidStudioProjects\\us.pauer-sheepsheadscorepad\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\ic_launcher.png",

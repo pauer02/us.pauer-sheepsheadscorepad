@@ -18,7 +18,7 @@
         android:showAsAction="ifRoom|withText"/>
 	<item
 		android:id="@+id/history"
-		android:icon="@drawable/ic_history"
+		android:icon="@drawable/ic_action_history"
 		android:title="@string/history"
 		android:showAsAction="ifRoom|withText"/>
     <item

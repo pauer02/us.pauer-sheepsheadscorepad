@@ -698,7 +698,7 @@ public class DBAdapter extends Observable<Observer>  {
 				cv.put(COL_HIST_PLAYER_POSITION, position);
 				cv.put(COL_HIST_PLAYER_PENALTY, penalty);
 				cv.put(COL_HIST_PLAYER_NOTES, note);
-				cv.put(COL_HIST_PLAYER_SCORE, lastHandScores[position]);
+				cv.put(COL_HIST_PLAYER_SCORE, lastHandScores[position-1]);
 				cv.put(COL_HIST_PLAYER_DATE, gameDate);
 				db.insert(TABLE_HIST_PLAYER, null, cv);
 				players.moveToNext();

@@ -10,49 +10,56 @@
     tools:context="us.pauer.android.sheepsheadscorepad.HistoryActivity">
 
     <LinearLayout
-        android:orientation="vertical"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@android:color/background_light"
+        android:orientation="vertical"
         android:weightSum="1">
+
         <LinearLayout
-            android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/LargeText"
                 android:layout_weight="@integer/scoreBoxWeight"
                 android:background="#FFFFFF"
                 android:gravity="center"
+                android:text="HISTORY"
                 android:textSize="20sp"
-                android:textStyle="bold"
-                android:text="HISTORY"/>
+                android:textStyle="bold" />
+
             <LinearLayout
                 android:id="@+id/scorelayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
-                    <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="@dimen/LargeText"
-                        android:background="#FFFFFF"
-                    android:gravity="bottom"
-                    android:textSize="12sp"
-                    android:textStyle="bold"
-                    android:text="Date of Game:"/>
+
                 <TextView
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:inputType="date"
-                    android:ems="5"
-                    android:id="@+id/editTextGameDate1"
-                    android:layout_weight="@integer/scoreBoxWeight" />
+                    android:layout_height="@dimen/LargeText"
+                    android:background="#FFFFFF"
+                    android:gravity="bottom"
+                    android:text="Date of Game:"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
 
-                </LinearLayout>
+                <TextView
+                    android:id="@+id/editTextGameDate1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="@integer/scoreBoxWeight"
+                    android:ems="5"
+                    android:inputType="date" />
+
+            </LinearLayout>
 
         </LinearLayout>
+
         <View
             android:layout_width="fill_parent"
             android:layout_height="0.2dp"
@@ -64,7 +71,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="0.01"
-            android:orientation="horizontal" >
+            android:orientation="horizontal">
+
             <View
                 android:layout_width="0.2dp"
                 android:layout_height="fill_parent"
@@ -79,8 +87,7 @@
                 android:background="#000000"
                 android:gravity="center_horizontal"
                 android:textColor="@android:color/white"
-                android:textSize="15sp" >
-            </TextView>
+                android:textSize="15sp"></TextView>
 
             <View
                 android:layout_width="0.2dp"
@@ -96,8 +103,7 @@
                 android:background="#000000"
                 android:gravity="center_horizontal"
                 android:textColor="@android:color/white"
-                android:textSize="15sp" >
-            </TextView>
+                android:textSize="15sp"></TextView>
 
             <View
                 android:layout_width="0.2dp"
@@ -113,8 +119,7 @@
                 android:background="#000000"
                 android:gravity="center_horizontal"
                 android:textColor="@android:color/white"
-                android:textSize="15sp" >
-            </TextView>
+                android:textSize="15sp"></TextView>
 
             <View
                 android:layout_width="0.2dp"
@@ -130,8 +135,7 @@
                 android:background="#000000"
                 android:gravity="center_horizontal"
                 android:textColor="@android:color/white"
-                android:textSize="15sp" >
-            </TextView>
+                android:textSize="15sp"></TextView>
 
             <View
                 android:layout_width="0.2dp"
@@ -147,8 +151,7 @@
                 android:background="#000000"
                 android:gravity="center_horizontal"
                 android:textColor="@android:color/white"
-                android:textSize="15sp" >
-            </TextView>
+                android:textSize="15sp"></TextView>
 
             <View
                 android:layout_width="0.2dp"
@@ -164,8 +167,7 @@
                 android:background="#000000"
                 android:gravity="center_horizontal"
                 android:textColor="@android:color/white"
-                android:textSize="15sp" >
-            </TextView>
+                android:textSize="15sp"></TextView>
 
             <View
                 android:layout_width="0.2dp"
@@ -181,8 +183,7 @@
                 android:background="#000000"
                 android:gravity="center_horizontal"
                 android:textColor="@android:color/white"
-                android:textSize="15sp" >
-            </TextView>
+                android:textSize="15sp"></TextView>
 
         </LinearLayout>
 
@@ -191,11 +192,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
+
             <View
-                android:layout_height="fill_parent"
                 android:layout_width="0.2dp"
-                android:visibility="visible"
-                android:background="@android:color/black"/>
+                android:layout_height="fill_parent"
+                android:background="@android:color/black"
+                android:visibility="visible" />
 
             <TextView
                 android:id="@+id/pc_Score11"
@@ -210,95 +212,108 @@
                 android:textStyle="bold" />
 
             <View
-                android:layout_height="fill_parent"
                 android:layout_width="0.2dp"
-                android:visibility="visible"
-                android:background="@android:color/black"/>
+                android:layout_height="fill_parent"
+                android:background="@android:color/black"
+                android:visibility="visible" />
+
             <TextView
                 android:id="@+id/pc_Score12"
                 android:layout_width="8dp"
                 android:layout_height="match_parent"
                 android:layout_weight="@integer/scoreBoxWeight"
                 android:background="#FFFFFF"
+                android:gravity="center"
                 android:textSize="24sp"
-                android:textStyle="bold"
-                android:gravity="center"/>
+                android:textStyle="bold" />
+
             <View
-                android:layout_height="fill_parent"
                 android:layout_width="0.2dp"
-                android:visibility="visible"
-                android:background="@android:color/black"/>
+                android:layout_height="fill_parent"
+                android:background="@android:color/black"
+                android:visibility="visible" />
+
             <TextView
                 android:id="@+id/pc_Score13"
                 android:layout_width="8dp"
                 android:layout_height="match_parent"
                 android:layout_weight="@integer/scoreBoxWeight"
                 android:background="#FFFFFF"
+                android:gravity="center"
                 android:textSize="24sp"
-                android:textStyle="bold"
-                android:gravity="center"/>
+                android:textStyle="bold" />
+
             <View
-                android:layout_height="fill_parent"
                 android:layout_width="0.2dp"
-                android:visibility="visible"
-                android:background="@android:color/black"/>
+                android:layout_height="fill_parent"
+                android:background="@android:color/black"
+                android:visibility="visible" />
+
             <TextView
                 android:id="@+id/pc_Score14"
                 android:layout_width="8dp"
                 android:layout_height="match_parent"
                 android:layout_weight="@integer/scoreBoxWeight"
                 android:background="#FFFFFF"
+                android:gravity="center"
                 android:textSize="24sp"
-                android:textStyle="bold"
-                android:gravity="center"/>
+                android:textStyle="bold" />
+
             <View
-                android:layout_height="fill_parent"
                 android:layout_width="0.2dp"
-                android:visibility="visible"
-                android:background="@android:color/black"/>
+                android:layout_height="fill_parent"
+                android:background="@android:color/black"
+                android:visibility="visible" />
+
             <TextView
                 android:id="@+id/pc_Score15"
                 android:layout_width="8dp"
                 android:layout_height="match_parent"
                 android:layout_weight="@integer/scoreBoxWeight"
                 android:background="#FFFFFF"
+                android:gravity="center"
                 android:textSize="24sp"
-                android:textStyle="bold"
-                android:gravity="center"/>
+                android:textStyle="bold" />
+
             <View
-                android:layout_height="fill_parent"
                 android:layout_width="0.2dp"
-                android:visibility="visible"
-                android:background="@android:color/black"/>
+                android:layout_height="fill_parent"
+                android:background="@android:color/black"
+                android:visibility="visible" />
+
             <TextView
                 android:id="@+id/pc_Score16"
                 android:layout_width="8dp"
                 android:layout_height="match_parent"
                 android:layout_weight="@integer/scoreBoxWeight"
                 android:background="#FFFFFF"
+                android:gravity="center"
                 android:textSize="24sp"
-                android:textStyle="bold"
-                android:gravity="center"/>
+                android:textStyle="bold" />
+
             <View
-                android:layout_height="fill_parent"
                 android:layout_width="0.2dp"
-                android:visibility="visible"
-                android:background="@android:color/black"/>
+                android:layout_height="fill_parent"
+                android:background="@android:color/black"
+                android:visibility="visible" />
+
             <TextView
                 android:id="@+id/pc_Score17"
                 android:layout_width="8dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="@integer/scoreBoxWeight"
                 android:background="#FFFFFF"
+                android:gravity="center"
                 android:textSize="24sp"
-                android:textStyle="bold"
-                android:gravity="center"/>
+                android:textStyle="bold" />
+
             <View
-                android:layout_height="fill_parent"
                 android:layout_width="0.2dp"
-                android:visibility="visible"
-                android:background="@android:color/black"/>
+                android:layout_height="fill_parent"
+                android:background="@android:color/black"
+                android:visibility="visible" />
         </LinearLayout>
+
         <View
             android:layout_width="fill_parent"
             android:layout_height="0.2dp"
@@ -310,39 +325,45 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="@dimen/LargeText"
                 android:background="#FFFFFF"
                 android:gravity="bottom"
+                android:text="Date of Game:"
                 android:textSize="12sp"
-                android:textStyle="bold"
-                android:text="Date of Game:"/>
+                android:textStyle="bold" />
+
             <TextView
+                android:id="@+id/editTextGameDate2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:inputType="date"
+                android:layout_weight="@integer/scoreBoxWeight"
                 android:ems="5"
-                android:id="@+id/editTextGameDate2"
-                android:layout_weight="@integer/scoreBoxWeight" />
+                android:inputType="date" />
 
         </LinearLayout>
+
         <View
             android:layout_width="fill_parent"
             android:layout_height="0.2dp"
             android:background="@android:color/black"
             android:visibility="visible" />
+
         <View
             android:layout_width="fill_parent"
             android:layout_height="0.2dp"
             android:background="@android:color/black"
             android:visibility="visible" />
+
         <LinearLayout
             android:id="@+id/historyPlayerNamesLayout2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="0.01"
-            android:orientation="horizontal" >
+            android:orientation="horizontal">
+
             <View
                 android:layout_width="0.2dp"
                 android:layout_height="fill_parent"
@@ -357,8 +378,7 @@
                 android:background="#000000"
                 android:gravity="center_horizontal"
                 android:textColor="@android:color/white"
-                android:textSize="15sp" >
-            </TextView>
+                android:textSize="15sp"></TextView>
 
             <View
                 android:layout_width="0.2dp"
@@ -374,8 +394,7 @@
                 android:background="#000000"
                 android:gravity="center_horizontal"
                 android:textColor="@android:color/white"
-                android:textSize="15sp" >
-            </TextView>
+                android:textSize="15sp"></TextView>
 
             <View
                 android:layout_width="0.2dp"
@@ -391,8 +410,7 @@
                 android:background="#000000"
                 android:gravity="center_horizontal"
                 android:textColor="@android:color/white"
-                android:textSize="15sp" >
-            </TextView>
+                android:textSize="15sp"></TextView>
 
             <View
                 android:layout_width="0.2dp"
@@ -408,8 +426,7 @@
                 android:background="#000000"
                 android:gravity="center_horizontal"
                 android:textColor="@android:color/white"
-                android:textSize="15sp" >
-            </TextView>
+                android:textSize="15sp"></TextView>
 
             <View
                 android:layout_width="0.2dp"
@@ -425,8 +442,7 @@
                 android:background="#000000"
                 android:gravity="center_horizontal"
                 android:textColor="@android:color/white"
-                android:textSize="15sp" >
-            </TextView>
+                android:textSize="15sp"></TextView>
 
             <View
                 android:layout_width="0.2dp"
@@ -442,8 +458,7 @@
                 android:background="#000000"
                 android:gravity="center_horizontal"
                 android:textColor="@android:color/white"
-                android:textSize="15sp" >
-            </TextView>
+                android:textSize="15sp"></TextView>
 
             <View
                 android:layout_width="0.2dp"
@@ -459,20 +474,21 @@
                 android:background="#000000"
                 android:gravity="center_horizontal"
                 android:textColor="@android:color/white"
-                android:textSize="15sp" >
-            </TextView>
+                android:textSize="15sp"></TextView>
 
         </LinearLayout>
+
         <LinearLayout
             android:id="@+id/scorelayout2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
+
             <View
-                android:layout_height="fill_parent"
                 android:layout_width="0.2dp"
-                android:visibility="visible"
-                android:background="@android:color/black"/>
+                android:layout_height="fill_parent"
+                android:background="@android:color/black"
+                android:visibility="visible" />
 
             <TextView
                 android:id="@+id/pc_Score21"
@@ -487,95 +503,108 @@
                 android:textStyle="bold" />
 
             <View
-                android:layout_height="fill_parent"
                 android:layout_width="0.2dp"
-                android:visibility="visible"
-                android:background="@android:color/black"/>
+                android:layout_height="fill_parent"
+                android:background="@android:color/black"
+                android:visibility="visible" />
+
             <TextView
                 android:id="@+id/pc_Score22"
                 android:layout_width="8dp"
                 android:layout_height="match_parent"
                 android:layout_weight="@integer/scoreBoxWeight"
                 android:background="#FFFFFF"
+                android:gravity="center"
                 android:textSize="24sp"
-                android:textStyle="bold"
-                android:gravity="center"/>
+                android:textStyle="bold" />
+
             <View
-                android:layout_height="fill_parent"
                 android:layout_width="0.2dp"
-                android:visibility="visible"
-                android:background="@android:color/black"/>
+                android:layout_height="fill_parent"
+                android:background="@android:color/black"
+                android:visibility="visible" />
+
             <TextView
                 android:id="@+id/pc_Score23"
                 android:layout_width="8dp"
                 android:layout_height="match_parent"
                 android:layout_weight="@integer/scoreBoxWeight"
                 android:background="#FFFFFF"
+                android:gravity="center"
                 android:textSize="24sp"
-                android:textStyle="bold"
-                android:gravity="center"/>
+                android:textStyle="bold" />
+
             <View
-                android:layout_height="fill_parent"
                 android:layout_width="0.2dp"
-                android:visibility="visible"
-                android:background="@android:color/black"/>
+                android:layout_height="fill_parent"
+                android:background="@android:color/black"
+                android:visibility="visible" />
+
             <TextView
                 android:id="@+id/pc_Score24"
                 android:layout_width="8dp"
                 android:layout_height="match_parent"
                 android:layout_weight="@integer/scoreBoxWeight"
                 android:background="#FFFFFF"
+                android:gravity="center"
                 android:textSize="24sp"
-                android:textStyle="bold"
-                android:gravity="center"/>
+                android:textStyle="bold" />
+
             <View
-                android:layout_height="fill_parent"
                 android:layout_width="0.2dp"
-                android:visibility="visible"
-                android:background="@android:color/black"/>
+                android:layout_height="fill_parent"
+                android:background="@android:color/black"
+                android:visibility="visible" />
+
             <TextView
                 android:id="@+id/pc_Score25"
                 android:layout_width="8dp"
                 android:layout_height="match_parent"
                 android:layout_weight="@integer/scoreBoxWeight"
                 android:background="#FFFFFF"
+                android:gravity="center"
                 android:textSize="24sp"
-                android:textStyle="bold"
-                android:gravity="center"/>
+                android:textStyle="bold" />
+
             <View
-                android:layout_height="fill_parent"
                 android:layout_width="0.2dp"
-                android:visibility="visible"
-                android:background="@android:color/black"/>
+                android:layout_height="fill_parent"
+                android:background="@android:color/black"
+                android:visibility="visible" />
+
             <TextView
                 android:id="@+id/pc_Score26"
                 android:layout_width="8dp"
                 android:layout_height="match_parent"
                 android:layout_weight="@integer/scoreBoxWeight"
                 android:background="#FFFFFF"
+                android:gravity="center"
                 android:textSize="24sp"
-                android:textStyle="bold"
-                android:gravity="center"/>
+                android:textStyle="bold" />
+
             <View
-                android:layout_height="fill_parent"
                 android:layout_width="0.2dp"
-                android:visibility="visible"
-                android:background="@android:color/black"/>
+                android:layout_height="fill_parent"
+                android:background="@android:color/black"
+                android:visibility="visible" />
+
             <TextView
                 android:id="@+id/pc_Score27"
                 android:layout_width="8dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="@integer/scoreBoxWeight"
                 android:background="#FFFFFF"
+                android:gravity="center"
                 android:textSize="24sp"
-                android:textStyle="bold"
-                android:gravity="center"/>
+                android:textStyle="bold" />
+
             <View
-                android:layout_height="fill_parent"
                 android:layout_width="0.2dp"
-                android:visibility="visible"
-                android:background="@android:color/black"/>
+                android:layout_height="fill_parent"
+                android:background="@android:color/black"
+                android:visibility="visible" />
         </LinearLayout>
+
         <View
             android:layout_width="fill_parent"
             android:layout_height="0.2dp"
@@ -587,40 +616,46 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="@dimen/LargeText"
                 android:background="#FFFFFF"
                 android:gravity="bottom"
+                android:text="Date of Game:"
                 android:textSize="12sp"
-                android:textStyle="bold"
-                android:text="Date of Game:"/>
+                android:textStyle="bold" />
+
             <TextView
+                android:id="@+id/editTextGameDate3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:inputType="date"
+                android:layout_weight="@integer/scoreBoxWeight"
                 android:ems="5"
-                android:id="@+id/editTextGameDate3"
-                android:layout_weight="@integer/scoreBoxWeight" />
+                android:inputType="date" />
 
         </LinearLayout>
+
         <View
             android:layout_width="fill_parent"
             android:layout_height="0.2dp"
             android:background="@android:color/black"
             android:visibility="visible" />
+
         <View
             android:id="@+id/separator_vert"
             android:layout_width="fill_parent"
             android:layout_height="0.2dp"
             android:background="@android:color/black"
             android:visibility="visible" />
+
         <LinearLayout
             android:id="@+id/historyPlayerNamesLayout3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="0.01"
-            android:orientation="horizontal" >
+            android:orientation="horizontal">
+
             <View
                 android:layout_width="0.2dp"
                 android:layout_height="fill_parent"
@@ -635,8 +670,7 @@
                 android:background="#000000"
                 android:gravity="center_horizontal"
                 android:textColor="@android:color/white"
-                android:textSize="15sp" >
-            </TextView>
+                android:textSize="15sp"></TextView>
 
             <View
                 android:layout_width="0.2dp"
@@ -652,8 +686,7 @@
                 android:background="#000000"
                 android:gravity="center_horizontal"
                 android:textColor="@android:color/white"
-                android:textSize="15sp" >
-            </TextView>
+                android:textSize="15sp"></TextView>
 
             <View
                 android:layout_width="0.2dp"
@@ -669,8 +702,7 @@
                 android:background="#000000"
                 android:gravity="center_horizontal"
                 android:textColor="@android:color/white"
-                android:textSize="15sp" >
-            </TextView>
+                android:textSize="15sp"></TextView>
 
             <View
                 android:layout_width="0.2dp"
@@ -686,8 +718,7 @@
                 android:background="#000000"
                 android:gravity="center_horizontal"
                 android:textColor="@android:color/white"
-                android:textSize="15sp" >
-            </TextView>
+                android:textSize="15sp"></TextView>
 
             <View
                 android:layout_width="0.2dp"
@@ -703,8 +734,7 @@
                 android:background="#000000"
                 android:gravity="center_horizontal"
                 android:textColor="@android:color/white"
-                android:textSize="15sp" >
-            </TextView>
+                android:textSize="15sp"></TextView>
 
             <View
                 android:layout_width="0.2dp"
@@ -720,8 +750,7 @@
                 android:background="#000000"
                 android:gravity="center_horizontal"
                 android:textColor="@android:color/white"
-                android:textSize="15sp" >
-            </TextView>
+                android:textSize="15sp"></TextView>
 
             <View
                 android:layout_width="0.2dp"
@@ -737,20 +766,21 @@
                 android:background="#000000"
                 android:gravity="center_horizontal"
                 android:textColor="@android:color/white"
-                android:textSize="15sp" >
-            </TextView>
+                android:textSize="15sp"></TextView>
 
         </LinearLayout>
+
         <LinearLayout
             android:id="@+id/scorelayout3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
+
             <View
-                android:layout_height="fill_parent"
                 android:layout_width="0.2dp"
-                android:visibility="visible"
-                android:background="@android:color/black"/>
+                android:layout_height="fill_parent"
+                android:background="@android:color/black"
+                android:visibility="visible" />
 
             <TextView
                 android:id="@+id/pc_Score31"
@@ -765,95 +795,108 @@
                 android:textStyle="bold" />
 
             <View
-                android:layout_height="fill_parent"
                 android:layout_width="0.2dp"
-                android:visibility="visible"
-                android:background="@android:color/black"/>
+                android:layout_height="fill_parent"
+                android:background="@android:color/black"
+                android:visibility="visible" />
+
             <TextView
                 android:id="@+id/pc_Score32"
                 android:layout_width="8dp"
                 android:layout_height="match_parent"
                 android:layout_weight="@integer/scoreBoxWeight"
                 android:background="#FFFFFF"
+                android:gravity="center"
                 android:textSize="24sp"
-                android:textStyle="bold"
-                android:gravity="center"/>
+                android:textStyle="bold" />
+
             <View
-                android:layout_height="fill_parent"
                 android:layout_width="0.2dp"
-                android:visibility="visible"
-                android:background="@android:color/black"/>
+                android:layout_height="fill_parent"
+                android:background="@android:color/black"
+                android:visibility="visible" />
+
             <TextView
                 android:id="@+id/pc_Score33"
                 android:layout_width="8dp"
                 android:layout_height="match_parent"
                 android:layout_weight="@integer/scoreBoxWeight"
                 android:background="#FFFFFF"
+                android:gravity="center"
                 android:textSize="24sp"
-                android:textStyle="bold"
-                android:gravity="center"/>
+                android:textStyle="bold" />
+
             <View
-                android:layout_height="fill_parent"
                 android:layout_width="0.2dp"
-                android:visibility="visible"
-                android:background="@android:color/black"/>
+                android:layout_height="fill_parent"
+                android:background="@android:color/black"
+                android:visibility="visible" />
+
             <TextView
                 android:id="@+id/pc_Score34"
                 android:layout_width="8dp"
                 android:layout_height="match_parent"
                 android:layout_weight="@integer/scoreBoxWeight"
                 android:background="#FFFFFF"
+                android:gravity="center"
                 android:textSize="24sp"
-                android:textStyle="bold"
-                android:gravity="center"/>
+                android:textStyle="bold" />
+
             <View
-                android:layout_height="fill_parent"
                 android:layout_width="0.2dp"
-                android:visibility="visible"
-                android:background="@android:color/black"/>
+                android:layout_height="fill_parent"
+                android:background="@android:color/black"
+                android:visibility="visible" />
+
             <TextView
                 android:id="@+id/pc_Score35"
                 android:layout_width="8dp"
                 android:layout_height="match_parent"
                 android:layout_weight="@integer/scoreBoxWeight"
                 android:background="#FFFFFF"
+                android:gravity="center"
                 android:textSize="24sp"
-                android:textStyle="bold"
-                android:gravity="center"/>
+                android:textStyle="bold" />
+
             <View
-                android:layout_height="fill_parent"
                 android:layout_width="0.2dp"
-                android:visibility="visible"
-                android:background="@android:color/black"/>
+                android:layout_height="fill_parent"
+                android:background="@android:color/black"
+                android:visibility="visible" />
+
             <TextView
                 android:id="@+id/pc_Score36"
                 android:layout_width="8dp"
                 android:layout_height="match_parent"
                 android:layout_weight="@integer/scoreBoxWeight"
                 android:background="#FFFFFF"
+                android:gravity="center"
                 android:textSize="24sp"
-                android:textStyle="bold"
-                android:gravity="center"/>
+                android:textStyle="bold" />
+
             <View
-                android:layout_height="fill_parent"
                 android:layout_width="0.2dp"
-                android:visibility="visible"
-                android:background="@android:color/black"/>
+                android:layout_height="fill_parent"
+                android:background="@android:color/black"
+                android:visibility="visible" />
+
             <TextView
                 android:id="@+id/pc_Score37"
                 android:layout_width="8dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="@integer/scoreBoxWeight"
                 android:background="#FFFFFF"
+                android:gravity="center"
                 android:textSize="24sp"
-                android:textStyle="bold"
-                android:gravity="center"/>
+                android:textStyle="bold" />
+
             <View
-                android:layout_height="fill_parent"
                 android:layout_width="0.2dp"
-                android:visibility="visible"
-                android:background="@android:color/black"/>
+                android:layout_height="fill_parent"
+                android:background="@android:color/black"
+                android:visibility="visible" />
         </LinearLayout>
+
         <View
             android:layout_width="fill_parent"
             android:layout_height="0.2dp"

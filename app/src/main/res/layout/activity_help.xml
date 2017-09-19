@@ -14,14 +14,37 @@
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true">
+        android:layout_alignParentLeft="true"
+        android:weightSum="1">
+
+        <TextView
+            android:id="@+id/NewGameHelpText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="New Game: Click Here..." />
 
         <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
             android:id="@+id/imageView"
-            android:layout_gravity="top|center_horizontal"
-            android:src="@drawable/screen2" />
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/newgame" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.06" />
+
+        <TextView
+            android:id="@+id/AddPlayerHelpText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Add Player: Click Here..." />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/addplayer" />
 
         <Button
             android:layout_width="wrap_content"
