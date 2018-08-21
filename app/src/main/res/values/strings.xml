@@ -58,6 +58,12 @@
     <string name="cancel">Cancel</string>
     <string name="ok">OK</string>
     <string name="title_activity_help">Help</string>
+    <string name="add_player_click_here">Add Player: Click Here...</string>
+    <string name="new_game_click_here">New Game: Click Here...</string>
+    <string name="set_player_picker_and_partner">Set Player, Picker and Partner:</string>
+    <string name="the_grey_boxes_">The grey boxes under each player for a given game indicate that player is not playing in that game. To indicate a Player, press the box for a player until the box turns blue. To indicate the Picker, choose green. To indicate Partner, select yellow.</string>
+    <string name="close">Close</string>
+    <string name="AddNote">Add a note for player</string>
 
 
 </resources>

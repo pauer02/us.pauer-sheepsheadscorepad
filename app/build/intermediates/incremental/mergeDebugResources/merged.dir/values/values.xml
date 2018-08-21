@@ -40,13 +40,16 @@
     <integer name="scoreBoxWeight">3</integer>
     <integer name="scrollAreaWeight">180</integer>
     <integer name="topRowsWeight">1</integer>
+    <string name="AddNote">Add a note for player</string>
     <string name="LostNoTrick">Lost No Trick</string>
     <string name="action_settings">Settings</string>
     <string name="add_doubler">x1</string>
     <string name="add_player">Add Player</string>
+    <string name="add_player_click_here">Add Player: Click Here...</string>
     <string name="addedpenalty">Added Penalty</string>
     <string name="app_name">Sheepshead Scorepad</string>
     <string name="cancel">Cancel</string>
+    <string name="close">Close</string>
     <string name="colorSettings">Color Settings</string>
     <string name="default_email">Default E-Mail Addresses?</string>
     <string name="double_limit">Double Limit:</string>
@@ -63,6 +66,7 @@
     <string name="lostNoSchneid">Lost No Schneid</string>
     <string name="menu_settings">Settings</string>
     <string name="new_game">New Game</string>
+    <string name="new_game_click_here">New Game: Click Here...</string>
     <string name="no">No</string>
     <string name="no_schneid">No Schneid</string>
     <string name="no_trick">No Trick</string>
@@ -80,8 +84,10 @@
     <string name="saveNote">Save Notes</string>
     <string name="scoreHand">Score</string>
     <string name="scoring">Scoring:</string>
+    <string name="set_player_picker_and_partner">Set Player, Picker and Partner:</string>
     <string name="sittingOut">Sitting Out</string>
     <string name="spaces">"       "</string>
+    <string name="the_grey_boxes_">The grey boxes under each player for a given game indicate that player is not playing in that game. To indicate a Player, press the box for a player until the box turns blue. To indicate the Picker, choose green. To indicate Partner, select yellow.</string>
     <string name="title_activity_email">EmailActivity</string>
     <string name="title_activity_help">Help</string>
     <string name="title_activity_settings">Game Settings</string>

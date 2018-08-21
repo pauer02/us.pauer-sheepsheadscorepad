@@ -9,50 +9,158 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="us.pauer.android.sheepsheadscorepad.HelpActivity">
 
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:weightSum="1">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbarAlwaysDrawVerticalTrack="true">
 
-        <TextView
-            android:id="@+id/NewGameHelpText"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="New Game: Click Here..." />
+            android:orientation="vertical"
+            android:scrollY="@dimen/MedMargin">
 
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:src="@drawable/newgame" />
+            <TextView
+                android:id="@+id/NewGameHelpText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/new_game_click_here" />
 
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.06" />
+            <ImageView
+                android:id="@+id/NewGameView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/newgame" />
 
-        <TextView
-            android:id="@+id/AddPlayerHelpText"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Add Player: Click Here..." />
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.1" />
 
-        <ImageView
-            android:id="@+id/imageView2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:src="@drawable/addplayer" />
+            <TextView
+                android:id="@+id/AddPlayerHelpText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/add_player_click_here" />
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Close"
-            android:id="@+id/button2"
-            android:layout_gravity="bottom|center_horizontal"
-            android:onClick="onCancelClick"/>
-    </LinearLayout>
+            <ImageView
+                android:id="@+id/AddPlayerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/addplayer" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.1" />
+
+            <TextView
+                android:id="@+id/SetPlayerRoleHelpText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Set Player, Picker and Partner:" />
+
+            <TextView
+                android:id="@+id/setPlayerHelpText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/the_grey_boxes_"
+                android:textSize="12sp"
+                android:visibility="visible" />
+
+            <ImageView
+                android:id="@+id/playerRoleView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/playercolorsplus" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.1" />
+
+            <TextView
+                android:id="@+id/ScoreHandHelpText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/scoreHand" />
+
+            <ImageView
+                android:id="@+id/scoreView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/scorebuttonplus" />
+
+            <TextView
+                android:id="@+id/UnlockHelpText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/unlockHand" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.1" />
+
+            <TextView
+                android:id="@+id/SetPenaltyHelpText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/penalty_label" />
+
+            <ImageView
+                android:id="@+id/setPenaltyView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/playerdialogplus" />
+            <ImageView
+                android:id="@+id/penaltyView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/playerpenalty" />
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.1" />
+
+            <TextView
+                android:id="@+id/PlayerNoteHelpText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/AddNote" />
+
+            <TextView
+                android:id="@+id/AddPlayerNoteHelpText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/the_grey_boxes_"
+                android:textSize="12sp"
+                android:visibility="visible" />
+
+            <ImageView
+                android:id="@+id/imageView6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/playernote" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.07" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.07" />
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|center_horizontal"
+                android:onClick="onCancelClick"
+                android:text="Close" />
+        </LinearLayout>
+    </ScrollView>
 
 </RelativeLayout>
