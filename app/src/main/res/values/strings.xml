@@ -64,6 +64,8 @@
     <string name="the_grey_boxes_">The grey boxes under each player for a given game indicate that player is not playing in that game. To indicate a Player, press the box for a player until the box turns blue. To indicate the Picker, choose green. To indicate Partner, select yellow.</string>
     <string name="close">Close</string>
     <string name="AddNote">Add a note for player</string>
+    <string name="setNote">Click on the black box at the very bottom of the screen in a player\'s column to add a note.  Be brief, there is not much space.</string>
+    <string name="unlockHandDetail">If a mistake was made, press the Unlock Hand button, correct the score, and press Score.  This change will NOT cascade to the rest of the hands.  Each hand in turn must be corrected.</string>
 
 
 </resources>

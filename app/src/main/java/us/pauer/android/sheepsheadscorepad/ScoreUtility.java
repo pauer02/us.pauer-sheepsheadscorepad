@@ -209,10 +209,11 @@ public class ScoreUtility {
 
 		int bump = 2;
 		int handResult = (Integer)((Button)handLayout.findViewById(R.id.buttonPickerStatus)).getTag();
-		int baseScoreStatus = handResult==R.string.won || handResult==R.string.lost ? 1 :
+		int baseScoreStatus = handResult==R.string.won || handResult==R.string.lost || handResult==R.string.leaster ? 1 :
 			handResult==R.string.wonNoSchneid || handResult==R.string.lostNoSchneid ? 2 : 3;
 		baseScoreStatus = baseScoreStatus * doublerMult;
-		boolean won = handResult==R.string.won || handResult==R.string.wonNoSchneid || handResult==R.string.wonNoTrick;
+		boolean won = handResult==R.string.won || handResult==R.string.wonNoSchneid || handResult==R.string.wonNoTrick
+				|| handResult == R.string.leaster;
 		boolean noTrick = handResult==R.string.wonNoTrick || handResult==R.string.LostNoTrick;
 		boolean noSchneid = handResult==R.string.wonNoSchneid || handResult==R.string.lostNoSchneid || noTrick; 
 		//get total number of players and whether partner
@@ -246,7 +247,7 @@ public class ScoreUtility {
 			}
 		}
 		if (!havePicker) {
-			throw new NoPickerException("You must choose a picker (in 2 handed, or leaster, Picker=Winner)");
+			throw new NoPickerException("You must choose a picker (in 2 handed, or Leaster, Picker=Winner)");
 		}
 		if (numPartners>2) {
 			throw new TooManyPartnersException("Limit of 2 partners max.");
@@ -257,6 +258,10 @@ public class ScoreUtility {
 		if ((numPlayers - (numPartners+1))<0) {
 			throw new TooManyPartnersException("Your number of partners plus picker exceeds the number of other players.");
 		}
+		if ((handResult==R.string.leaster) && (numPartners > 0)) {
+			throw new TooManyPartnersException("No partner should be chosen for Leaster");
+		}
+
 		int playerMultiplier = 1;
 		int pickerModifier = 2;
 		int partnerModifier = 1;
@@ -292,7 +297,8 @@ public class ScoreUtility {
 		for (int i=0; i<7; i++) {
 			switch (playerArray[i]) {
 			case R.string.picker:
-				if (handResult==R.string.won || handResult==R.string.wonNoSchneid || handResult==R.string.wonNoTrick) {
+				if (handResult==R.string.won || handResult==R.string.wonNoSchneid ||
+						handResult==R.string.wonNoTrick || handResult==R.string.leaster) {
 				 playerMultiplier = pickerModifier;	
 				} else {
 					playerMultiplier = -1*pickerModifier*bump;
@@ -306,7 +312,8 @@ public class ScoreUtility {
 				}
 				break;
 			case R.string.player:
-				if (handResult==R.string.won || handResult==R.string.wonNoSchneid || handResult==R.string.wonNoTrick) {
+				if (handResult==R.string.won || handResult==R.string.wonNoSchneid ||
+						handResult==R.string.wonNoTrick || handResult==R.string.leaster) {
 				   playerMultiplier = -1;	
 				} else {
 					playerMultiplier = 1*bump;

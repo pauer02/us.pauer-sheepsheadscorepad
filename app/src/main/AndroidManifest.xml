@@ -4,13 +4,9 @@
     android:versionCode="1"
     android:versionName="1.0">
 
-    <uses-sdk
-        android:minSdkVersion="15"
-        android:targetSdkVersion="15" />
-
-    <android:uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <android:uses-permission android:name="android.permission.READ_PHONE_STATE" />
-    <android:uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -29,13 +25,13 @@
         </activity>
         <activity
             android:name=".SettingsActivity"
-            android:label="@string/title_activity_settings"></activity>
+            android:label="@string/title_activity_settings"/>
         <activity
             android:name=".HelpActivity"
-            android:label="@string/title_activity_help"></activity>
+            android:label="@string/title_activity_help"/>
         <activity
             android:name=".HistoryActivity"
-            android:label="History"></activity>
+            android:label="History"/>
 
     </application>
 

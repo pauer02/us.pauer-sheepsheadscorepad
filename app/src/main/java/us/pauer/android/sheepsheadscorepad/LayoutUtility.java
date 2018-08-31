@@ -68,20 +68,22 @@ public class LayoutUtility {
 		boolean pickerWon = true;
 		boolean gotSchnied = true;
 		boolean gotTrick = true;
+		boolean leastBool = false;
 		boolean handScored = hands.getInt(hands.getColumnIndex(DBAdapter.COL_HAND_SCORED))==1;
 		if (handScored) {
 			pickerWon = hands.getInt(hands.getColumnIndex(DBAdapter.COL_HAND_PICKER_WIN))==1;
 			gotSchnied = hands.getInt(hands.getColumnIndex(DBAdapter.COL_HAND_NO_SCHNEID))==0;
 			gotTrick = hands.getInt(hands.getColumnIndex(DBAdapter.COL_HAND_NO_TRICK))==0;
+			leastBool = hands.getInt(hands.getColumnIndex(DBAdapter.COL_HAND_LEASTER))==1;
 		} 
 		fillScoreColors(scoreLayout, handNum, handScored, pickerWon, gotSchnied, gotTrick);
-		setButtonSettings(scoreLayout, handNum, handScored, pickerWon, gotSchnied, gotTrick);
+		setButtonSettings(scoreLayout, handNum, handScored, pickerWon, gotSchnied, gotTrick, leastBool);
 		
 		return scoreLayout;
 	}
 
 	private void setButtonSettings(LinearLayout scoreLayout, int handNum, boolean handScored, 
-			boolean pickerWon, boolean gotSchneid, boolean gotTrick) {
+			boolean pickerWon, boolean gotSchneid, boolean gotTrick, boolean leastBool) {
 		Button pickerStatus = (Button)scoreLayout.findViewById(R.id.buttonPickerStatus);
 		Button scoreHand = (Button)scoreLayout.findViewById(R.id.buttonScore);
 		if (!handScored) {
@@ -91,29 +93,36 @@ public class LayoutUtility {
 		} else {
 			setScoresClickable(scoreLayout, false);
 			scoreHand.setText(R.string.unlockHand);
-			if (pickerWon) {
-				if (gotSchneid) {
-					pickerStatus.setText(R.string.won);
-				} else {
-					if (gotTrick) {
-						pickerStatus.setText(R.string.wonNoSchneid);
+			pickerStatus.setClickable(false);
+			if (leastBool) {
+				pickerStatus.setText(R.string.leaster);
+			}
+			else {
+				if (pickerWon) {
+					if (gotSchneid) {
+						pickerStatus.setText(R.string.won);
 					} else {
-						pickerStatus.setText(R.string.wonNoTrick);
+						if (gotTrick) {
+							pickerStatus.setText(R.string.wonNoSchneid);
+						} else {
+							pickerStatus.setText(R.string.wonNoTrick);
+						}
 					}
-				}
-			} else {
-				if (gotSchneid) {
-					pickerStatus.setText(R.string.lost);
 				} else {
-					if (gotTrick) {
-						pickerStatus.setText(R.string.lostNoSchneid);
+					if (gotSchneid) {
+						pickerStatus.setText(R.string.lost);
 					} else {
-						pickerStatus.setText(R.string.LostNoTrick);
+						if (gotTrick) {
+							pickerStatus.setText(R.string.lostNoSchneid);
+						} else {
+							pickerStatus.setText(R.string.LostNoTrick);
+						}
 					}
 				}
 			}
 		}
 		Button doublerButton = (Button)scoreLayout.findViewById(R.id.buttonDoubler);
+		doublerButton.setClickable(false);
 		doublerButton.setTag(R.string.handKey, Integer.toString(handNum));
 		int currentDblsThisHand = dbAdapter.getDoublersForHand(handNum);
 		TextView doubleText = (TextView)scoreLayout.findViewById(R.id.buttonDoubler);
@@ -140,7 +149,12 @@ public class LayoutUtility {
 		}
 		playerScores = dbAdapter.getScoresForHandNumber(handNum);
 		fillScoreColors(scoreLine, colorArray, playerScores, handNum, false);
-		setButtonSettings(scoreLine, handNum, false, true, true, true);
+		Button pickerStatus = (Button)scoreLine.findViewById(R.id.buttonPickerStatus);
+		pickerStatus.setClickable(true);
+		Button doublerButton = (Button)scoreLine.findViewById(R.id.buttonDoubler);
+		doublerButton.setClickable(false);
+		//setButtonSettings(scoreLine, handNum, false, true, true,
+		//		true, false);
 	}
 	
 	

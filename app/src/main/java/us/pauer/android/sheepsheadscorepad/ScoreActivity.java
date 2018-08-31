@@ -60,20 +60,16 @@ public class ScoreActivity extends Activity implements Observer  {
 			case R.id.add_player:
 				nameEntryDialog();
 				return true;
+			case R.id.help:
+				Intent k = new Intent(this, HelpActivity.class);
+				startActivity(k);
+				return true;
 			case R.id.menu_settings:
 				Intent i = new Intent(this, SettingsActivity.class);
 				startActivity(i);
 				return true;
-	/*	case R.id.stats:
-			Intent j = new Intent(this, StatsActivity.class);
-			startActivity(j);
-			return true;  */
 			case R.id.email:
 				sendResultsDialog();
-				return true;
-			case R.id.help:
-				Intent k = new Intent(this, HelpActivity.class);
-				startActivity(k);
 				return true;
 			case R.id.history:
 				Intent m = new Intent(this, HistoryActivity.class);
@@ -170,11 +166,13 @@ public class ScoreActivity extends Activity implements Observer  {
 						scoresForPreviousHand, doublers);
 				int handResult = (Integer)((Button)scoreLine.findViewById(R.id.buttonPickerStatus)).getTag();
 				boolean pickerWon = handResult==R.string.won ||	handResult==R.string.wonNoSchneid
-						|| handResult==R.string.wonNoTrick;
+						|| handResult==R.string.wonNoTrick || handResult==R.string.leaster;
 				boolean noTrick = handResult==R.string.wonNoTrick || handResult==R.string.LostNoTrick;
+				boolean leastBool = handResult==R.string.leaster;
 				boolean noSchneid = noTrick || handResult==R.string.wonNoSchneid || handResult==R.string.lostNoSchneid;
-				dbAdapter.scoreHand(handNumber, doublers, pickerWon, noSchneid, noTrick, 
+				dbAdapter.scoreHand(handNumber, doublers, pickerWon, noSchneid, noTrick, leastBool,
 						scoresPlayers[1], scoresPlayers[0]);
+				//disable picker state and multiplier buttons
 			} catch (NoColorMatchException e) {
 				Toast.makeText(this, e.getMessage(), Toast.LENGTH_SHORT).show();
 				e.printStackTrace();

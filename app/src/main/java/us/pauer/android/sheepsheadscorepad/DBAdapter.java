@@ -56,6 +56,7 @@ public class DBAdapter extends Observable<Observer>  {
 	static final String COL_HAND_NO_SCHNEID = "noschneid";
 	static final String COL_HAND_NO_TRICK = "notrick";
 	static final String COL_HAND_SCORED = "scored";
+	static final String COL_HAND_LEASTER = "leaster";
 	
 	static final String COL_SCORE_GAME = "gameid";
 	static final String COL_SCORE_HAND_NUMBER = "handnumber";
@@ -168,7 +169,8 @@ public class DBAdapter extends Observable<Observer>  {
 					+ COL_HAND_NUMBER + " integer not null, "
 					+ COL_HAND_PICKER_WIN + " numeric, "
 					+ COL_HAND_WHO_PLAYED + " text, "
-					+ COL_HAND_SCORED + " numeric not null);";
+					+ COL_HAND_SCORED + " numeric not null, "
+					+ COL_HAND_LEASTER + " numeric);";
 			db.execSQL(sql);
 		}
 		
@@ -463,9 +465,10 @@ public class DBAdapter extends Observable<Observer>  {
 
 
 	public void scoreHand(int handNumber, int doublers, boolean pickerWin, 
-		    boolean noSchneid, boolean noTrick, int[] playerArray, int[] scores) {
+		    boolean noSchneid, boolean noTrick, boolean leastBool, int[] playerArray,
+						  int[] scores) {
 		updateHand(handNumber, doublers, pickerWin, 
-			 noSchneid, noTrick, playerArray, TRUE, scores);
+			 noSchneid, noTrick, leastBool, playerArray, TRUE);
 		setScoresForHandNumber(handNumber, scores);
 		notifyObservers();
 		
@@ -473,8 +476,8 @@ public class DBAdapter extends Observable<Observer>  {
 	
 	
 	private void updateHand(int handNumber, int doublers, boolean pickerWin, 
-			boolean noSchneid, boolean noTrick, int[] playerArray, int scoreHand,
-			int[] scores) {
+			boolean noSchneid, boolean noTrick, boolean leastBool, int[] playerArray,
+							int scoreHand) {
 		ContentValues cv = new ContentValues();
 		cv.put(COL_HAND_DOUBLERS, doublers);
 		cv.put(COL_HAND_PICKER_WIN, pickerWin ? TRUE : FALSE);
@@ -484,6 +487,7 @@ public class DBAdapter extends Observable<Observer>  {
 		cv.put(COL_HAND_NUMBER, handNumber);
 		cv.put(COL_HAND_WHO_PLAYED, Arrays.toString(playerArray));
 		cv.put(COL_HAND_SCORED, scoreHand);
+		cv.put(COL_HAND_LEASTER, leastBool ? TRUE : FALSE);
 		Cursor cursor = getHand(handNumber);
 		// check if hand exists
 		if (cursor!=null && cursor.getCount()!=0) {
@@ -531,7 +535,7 @@ public class DBAdapter extends Observable<Observer>  {
 
 	public Cursor getAllHands() {
 		long gamerow = getActiveGameId();
-		String[] selectRows = new String[9];
+		String[] selectRows = new String[10];
 		selectRows[0] = KEY_ROWID;
 		selectRows[1] = COL_HAND_DOUBLERS;
 		selectRows[2] = COL_HAND_GAME;
@@ -541,6 +545,7 @@ public class DBAdapter extends Observable<Observer>  {
 		selectRows[6] = COL_HAND_PICKER_WIN;
 		selectRows[7] = COL_HAND_WHO_PLAYED;
 		selectRows[8] = COL_HAND_SCORED;
+		selectRows[9] = COL_HAND_LEASTER;
 		return db.query(TABLE_HAND, selectRows, COL_HAND_GAME+"= ?", 
 				new String[]{Long.toString(gamerow)}, "","",COL_HAND_NUMBER);
 	}

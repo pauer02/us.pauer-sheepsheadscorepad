@@ -31,8 +31,12 @@ public class NameMenuDialogFragment extends DialogFragment {
 		alert.setPositiveButton("Perform Action", new DialogInterface.OnClickListener() {
 			public void onClick(DialogInterface dialog, int whichButton) {
 				if (checkedItem==0) {
-					Toast.makeText(alert.getContext(), R.string.playerremoved, Toast.LENGTH_SHORT).show();
-					dbAdapter.removePlayerFromGame(name);
+					String removeMessage = "Player Removed";
+					if (!dbAdapter.removePlayerFromGame(name)) {
+						removeMessage = "Player has scores and cannot be removed.";
+					}
+					Toast.makeText(alert.getContext(), removeMessage, Toast.LENGTH_SHORT).show();
+
 				} else if (checkedItem==1) {
 					Toast.makeText(alert.getContext(), R.string.addedpenalty, Toast.LENGTH_SHORT).show();
 					dbAdapter.addPenalty(name);

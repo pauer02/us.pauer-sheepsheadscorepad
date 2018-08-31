@@ -37,7 +37,7 @@ public class EmailDialogFragment extends DialogFragment {
 		String text = "";
 		for (int i=0; i<players.length; i++) {
 			text = text + " " + players[i] + ":";
-     		text = text + " " + scores[i] + "\n";
+     		text = text + " " + scores[i] + System.getProperty("line.separator");
 		}
 		return text;
 	}

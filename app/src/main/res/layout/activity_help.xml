@@ -1,68 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
+    android:scrollbars="vertical"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="us.pauer.android.sheepsheadscorepad.HelpActivity">
-
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:scrollbarAlwaysDrawVerticalTrack="true">
+    tools:context="us.pauer.android.sheepsheadscorepad.HelpActivity"
+    android:isScrollContainer="true">
 
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:scrollY="@dimen/MedMargin">
+            android:orientation="vertical">
 
             <TextView
                 android:id="@+id/NewGameHelpText"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/new_game_click_here" />
+                android:text="@string/new_game_click_here"
+                android:textStyle="bold"/>
 
             <ImageView
                 android:id="@+id/NewGameView"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/newgame" />
 
             <Space
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="0.1" />
+                android:layout_height="20dp" />
 
             <TextView
                 android:id="@+id/AddPlayerHelpText"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textStyle="bold"
                 android:text="@string/add_player_click_here" />
 
             <ImageView
                 android:id="@+id/AddPlayerView"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/addplayer" />
 
             <Space
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="0.1" />
+                android:layout_height="20dp" />
+
 
             <TextView
                 android:id="@+id/SetPlayerRoleHelpText"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textStyle="bold"
                 android:text="Set Player, Picker and Partner:" />
 
             <TextView
                 android:id="@+id/setPlayerHelpText"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/the_grey_boxes_"
                 android:textSize="12sp"
@@ -70,70 +68,83 @@
 
             <ImageView
                 android:id="@+id/playerRoleView"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/playercolorsplus" />
 
             <Space
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="0.1" />
-
+                android:layout_height="20dp" />
             <TextView
                 android:id="@+id/ScoreHandHelpText"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textStyle="bold"
                 android:text="@string/scoreHand" />
 
             <ImageView
                 android:id="@+id/scoreView"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/scorebuttonplus" />
 
-            <TextView
-                android:id="@+id/UnlockHelpText"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/unlockHand" />
-
             <Space
                 android:layout_width="match_parent"
+                android:layout_height="20dp" />
+
+            <TextView
+                android:id="@+id/UnlockHelpText"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="0.1" />
+                android:textStyle="bold"
+                android:text="@string/unlockHand" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/unlockHandDetail"/>
+            <ImageView
+                android:id="@+id/unlockHelpView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/scorebuttons" />
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="20dp" />
 
             <TextView
                 android:id="@+id/SetPenaltyHelpText"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textStyle="bold"
                 android:text="@string/penalty_label" />
 
             <ImageView
                 android:id="@+id/setPenaltyView"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/playerdialogplus" />
             <ImageView
                 android:id="@+id/penaltyView"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/playerpenalty" />
             <Space
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="0.1" />
+                android:layout_height="20dp" />
 
             <TextView
                 android:id="@+id/PlayerNoteHelpText"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textStyle="bold"
                 android:text="@string/AddNote" />
 
             <TextView
                 android:id="@+id/AddPlayerNoteHelpText"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/the_grey_boxes_"
+                android:text="@string/setNote"
                 android:textSize="12sp"
                 android:visibility="visible" />
 
@@ -145,22 +156,16 @@
 
             <Space
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="0.07" />
+                android:layout_height="20dp" />
 
-            <Space
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="0.07" />
 
             <Button
                 android:id="@+id/button2"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="bottom|center_horizontal"
                 android:onClick="onCancelClick"
                 android:text="Close" />
         </LinearLayout>
-    </ScrollView>
 
-</RelativeLayout>
+</ScrollView>
