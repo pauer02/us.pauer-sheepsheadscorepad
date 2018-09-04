@@ -59,25 +59,33 @@ public class EmailDialogFragment extends DialogFragment {
 				scoreArray = dbAdapter.getScoresForHandNumber(furthestHand);
 			}
 			String[] playersArray = getPlayers(dbAdapter);
-			final String emailText = getEmailText(scoreArray, playersArray);
-	        alert.setPositiveButton("Send", new DialogInterface.OnClickListener() {
-	        	public void onClick(DialogInterface dialog, int whichButton) {
-	        		String value = input.getText().toString().trim();
-                    if (value.equalsIgnoreCase("")) {
-                        Toast.makeText(getActivity(), "Addresses cannot be blank.",Toast.LENGTH_SHORT).show();
-                    }
-                    String[] addresses = value.trim().split("[,; ]");
-					Calendar cal = Calendar.getInstance();
-					SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
-					String strDate = sdf.format(cal.getTime());
-                    final Intent emailIntent = new Intent(Intent.ACTION_SEND);
-                    emailIntent.setType("text/html");
-                    emailIntent.putExtra(Intent.EXTRA_EMAIL, addresses);
-                    emailIntent.putExtra(Intent.EXTRA_SUBJECT, "Game Results:"+strDate);
-                    emailIntent.putExtra(Intent.EXTRA_TEXT, emailText);
-                    alert.getContext().startActivity(Intent.createChooser(emailIntent, "Send mail..."));
-	        	}
-	        });
+			if ((playersArray!=null) && (furthestHand != 0)) {
+				final String emailText = getEmailText(scoreArray, playersArray);
+
+				alert.setPositiveButton("Send", new DialogInterface.OnClickListener() {
+					public void onClick(DialogInterface dialog, int whichButton) {
+						String value = input.getText().toString().trim();
+						if (value.equalsIgnoreCase("")) {
+							Toast.makeText(getActivity(), "Addresses cannot be blank.", Toast.LENGTH_SHORT).show();
+						}
+						String[] addresses = value.trim().split("[,; ]");
+						Calendar cal = Calendar.getInstance();
+						SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+						String strDate = sdf.format(cal.getTime());
+						final Intent emailIntent = new Intent(Intent.ACTION_SEND);
+						emailIntent.setType("text/html");
+						emailIntent.putExtra(Intent.EXTRA_EMAIL, addresses);
+						emailIntent.putExtra(Intent.EXTRA_SUBJECT, "Game Results:" + strDate);
+						emailIntent.putExtra(Intent.EXTRA_TEXT, emailText);
+						alert.getContext().startActivity(Intent.createChooser(emailIntent, "Send mail..."));
+					}
+				});
+			}
+			else
+			{
+				alert.setMessage("No active game or players found. Scores cannot be sent.");
+
+			}
 
 	       alert.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
 	        	public void onClick(DialogInterface dialog, int whichButton) {
