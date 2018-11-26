@@ -516,7 +516,7 @@ public class DBAdapter extends Observable<Observer>  {
 	}
 	
 
-	private Cursor getHand(int handNumber) {
+	public Cursor getHand(int handNumber) {
 		long gamerow = getActiveGameId();
 		return db.query(TABLE_HAND, null, COL_HAND_NUMBER+"= ? AND "+COL_HAND_GAME+"= ?", 
 				new String[]{Integer.toString(handNumber), Long.toString(gamerow)}, "","","");

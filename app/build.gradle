@@ -1,6 +1,7 @@
 apply plugin: 'com.android.application'
 
 android {
+
     signingConfigs {
         bigfoot1 {
             keyAlias 'bigfoot'
@@ -16,7 +17,11 @@ android {
         minSdkVersion 15
         targetSdkVersion 15
         signingConfig signingConfigs.bigfoot1
+        versionCode 1
+        versionName "1.1"
     }
+
+
     buildTypes {
         release {
             minifyEnabled false

@@ -2,12 +2,12 @@ package us.pauer.android.sheepsheadscorepad;
 
 
 
-import java.util.Observable;
+
 import java.util.Observer;
+import java.util.Observable;
 
 
 import android.os.Bundle;
-import android.preference.EditTextPreference;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Intent;
@@ -139,18 +139,19 @@ public class ScoreActivity extends Activity implements Observer  {
 	}
 	
 	public void onScoreHandButtonClick(View scoreButton) {
-		LinearLayout parentLayout = (LinearLayout)this.findViewById(R.id.linearScoreLayout);
+		//LinearLayout parentLayout = (LinearLayout)this.findViewById(R.id.linearScoreLayout);
 		LinearLayout scoreLine = (LinearLayout)scoreButton.getParent().getParent().getParent();
 		Button scoreHandButton = (Button)scoreButton;
 		TextView handText = (TextView)scoreLine.getChildAt(0);
 		int handNumber = Integer.parseInt((String)handText.getText());
+		LayoutUtility lu = new LayoutUtility(this, dbAdapter);
 		if (scoreHandButton.getText().toString().equalsIgnoreCase(
 				getResources().getString(R.string.unlockHand))) {
-			LayoutUtility lu = new LayoutUtility(this, dbAdapter);
 			lu.setScoresClickable(scoreLine, true);
 			lu.resetColorsToOriginalRoles((LinearLayout)(scoreLine.getParent()), handNumber);
 
 			scoreHandButton.setText(R.string.scoreHand);
+			return;
 		} else {
 	
 			TextView doublerText = (TextView)scoreLine.findViewById(R.id.buttonDoubler);
@@ -190,7 +191,13 @@ public class ScoreActivity extends Activity implements Observer  {
 				e.printStackTrace();
 				return;
 			}
-			drawInterface();
+			//drawInterface();
+			// instead just draw this hand
+			// get this hand layout  =  LinearLayout scoreLine
+
+			scoreLine = (LinearLayout)lu.GetScoreViewForHand(handNumber);
+
+			// set scores
 		}
 		
 		

@@ -82,6 +82,31 @@ public class LayoutUtility {
 		return scoreLayout;
 	}
 
+	public View GetScoreViewForHand(int handnumber) {
+		LayoutInflater inflater = owningActivity.getLayoutInflater();
+		LinearLayout scoreLayout = (LinearLayout)inflater.inflate(R.layout.hand_layout, null, false);
+		Cursor handCursor = dbAdapter.getHand(handnumber);
+		handCursor.moveToFirst();
+
+		//default values
+		boolean pickerWon = true;
+		boolean gotSchnied = true;
+		boolean gotTrick = true;
+		boolean leastBool = false;
+		boolean handScored = handCursor.getInt(handCursor.getColumnIndex(DBAdapter.COL_HAND_SCORED))==1;
+		if (handScored) {
+			pickerWon = handCursor.getInt(handCursor.getColumnIndex(DBAdapter.COL_HAND_PICKER_WIN))==1;
+			gotSchnied = handCursor.getInt(handCursor.getColumnIndex(DBAdapter.COL_HAND_NO_SCHNEID))==0;
+			gotTrick = handCursor.getInt(handCursor.getColumnIndex(DBAdapter.COL_HAND_NO_TRICK))==0;
+			leastBool = handCursor.getInt(handCursor.getColumnIndex(DBAdapter.COL_HAND_LEASTER))==1;
+		}
+		fillScoreColors(scoreLayout, handnumber, handScored, pickerWon, gotSchnied, gotTrick);
+		setButtonSettings(scoreLayout, handnumber, handScored, pickerWon, gotSchnied, gotTrick, leastBool);
+
+		return scoreLayout;
+	}
+
+
 	private void setButtonSettings(LinearLayout scoreLayout, int handNum, boolean handScored, 
 			boolean pickerWon, boolean gotSchneid, boolean gotTrick, boolean leastBool) {
 		Button pickerStatus = (Button)scoreLayout.findViewById(R.id.buttonPickerStatus);

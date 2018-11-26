@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="us.pauer.android.sheepsheadscorepad"
-    android:versionCode="1"
-    android:versionName="1.0">
+    package="us.pauer.android.sheepsheadscorepad">
 
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <!-- Required to act as a custom watch face. -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" /> <!-- Required for complications to receive complication data and open the provider chooser. -->
+    <uses-permission android:name="com.google.android.wearable.permission.RECEIVE_COMPLICATION_DATA" />
 
     <application
         android:allowBackup="true"
@@ -25,14 +27,13 @@
         </activity>
         <activity
             android:name=".SettingsActivity"
-            android:label="@string/title_activity_settings"/>
+            android:label="@string/title_activity_settings" />
         <activity
             android:name=".HelpActivity"
-            android:label="@string/title_activity_help"/>
+            android:label="@string/title_activity_help" />
         <activity
             android:name=".HistoryActivity"
-            android:label="History"/>
-
+            android:label="History" />
     </application>
 
 </manifest>
